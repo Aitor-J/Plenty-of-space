@@ -30,5 +30,17 @@
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.23",
     "vite": "^2.8.0"
-  }
+  },
+  "description": "This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.\r It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.",
+  "main": "postcss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aitor-J/Plenty-of-space.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aitor-J/Plenty-of-space/issues"
+  },
+  "homepage": "https://github.com/Aitor-J/Plenty-of-space#readme"
 }
