@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "space age";
-    src: url("./assets/fonts/space\ age.ttf")
+  font-family: "space age";
+  src: url("./assets/fonts/space age.ttf");
 }

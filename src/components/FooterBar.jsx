@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="mb-6 md:mb-0">
           <a href="//ok" className="flex items-center">
             <img src={logo} className="h-16 mr-4" alt="Logo" />
-            <span className="self-center text-2xl font-semibold text-white whitespace-nowrap">
+            <span className="self-center text-2xl font-semibold text-white font-title whitespace-nowrap">
               Plenty Of Space
             </span>
           </a>
