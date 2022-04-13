@@ -1,16 +1,15 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import logo from "../assets/images/logo.png";
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="bg-black">
       <div className="flex flex-row justify-center py-[2vh]">
         <a href="#" className="self-center h-16 mr-3">
           <img
             className="self-center h-16 mr-3"
-            src={logo}
+            src="{logo}"
             alt="logo plenty of space"
           />
         </a>
