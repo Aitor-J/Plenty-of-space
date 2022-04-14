@@ -1,4 +1,5 @@
 import "./App.css";
+// import axios from "axios";
 import NavBar from "./components/NavBar";
 import Footer from "./components/FooterBar";
 import HomeBody from "./components/HomeBody";

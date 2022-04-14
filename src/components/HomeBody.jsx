@@ -2,11 +2,10 @@
 import PropTypes from "prop-types";
 
 const HomeBody = ({ image }) => {
-  console.log(image);
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full ">
       <div
-        className={`${image} absolute top-0 left-0 flex items-center justify-center w-full h-full bg-top bg-cover cursor-auto bg-[url('https://img4.goodfon.com/original/1920x1080/d/df/planet-sci-fi-galaxy.jpg')]`}
+        className={`${image} absolute min-h-screen top-0 left-0 flex items-center justify-center w-full h-full bg-cover cursor-auto `}
       >
         <div className="w-full p-72">
           <p className="text-lg text-center text-white font-title">
