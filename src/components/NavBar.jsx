@@ -5,7 +5,7 @@ import logo from "../assets/images/logo.png";
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="absolute z-10 w-full mt-0 ml-0 bg-transparent ">
       <div className="flex flex-row justify-center py-[2vh]">
         <a href="#" className="self-center h-16 mr-3">
           <img
