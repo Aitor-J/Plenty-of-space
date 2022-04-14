@@ -1,20 +1,37 @@
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import logo from "../assets/images/logo.png";
 
 const NavBar = () => {
   return (
-    <div className="bg-black">
-      <div>
-        <img className="h-8 mr-3" src={logo} alt="logo plenty of space" />
-        <h1 className="text-6xl text-center text-white font-title py-[5vh]">
+    <div>
+      <div className="flex flex-row justify-center py-[2vh]">
+        <a href="#" className="self-center h-16 mr-3">
+          <img
+            className="self-center h-16 mr-3"
+            src={logo}
+            alt="logo plenty of space"
+          />
+        </a>
+        <h1 className="text-6xl  text-white font-title px-[5vw] py-[5vh]">
           PLENTY OF SPACE
         </h1>
       </div>
-      <nav className="text-white">
-        <ul className="flex flex-row justify-center py-[2vh]">
-          <li className="px-[15vw] text-2xl">Home</li>
-          <li className="px-[15vw] text-2xl">About</li>
-          <li className="px-[15vw] text-2xl">Contact</li>
+      <div className="flex justify-center">
+        <div className="bg-white w-11/12 py-[0.1vh] "></div>
+      </div>
+      <nav className="text-slate-400">
+        <ul className="flex flex-row justify-around py-[4vh]">
+          <li className="text-2xl duration-700 ease-in-out font-secondary hover:tracking-widest hover:text-white">
+            <a href="#">&lt;Home&gt;</a>
+          </li>
+          <li className="text-2xl duration-700 ease-in-out font-secondary hover:tracking-widest hover:text-white">
+            <a href="#"> &lt;About&gt;</a>
+          </li>
+          <li className="text-2xl duration-700 ease-in-out font-secondary hover:tracking-widest hover:text-white">
+            <a href="#"> &lt;Contact&gt;</a>
+          </li>
         </ul>
       </nav>
     </div>
