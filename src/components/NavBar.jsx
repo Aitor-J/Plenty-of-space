@@ -1,6 +1,7 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 
 const NavBar = () => {
@@ -24,13 +25,13 @@ const NavBar = () => {
       <nav className="text-slate-400">
         <ul className="flex flex-row justify-around py-[4vh]">
           <li className="text-2xl duration-700 ease-in-out font-secondary hover:tracking-widest hover:text-white">
-            <a href="#">&lt;Home&gt;</a>
+            <Link to="/my-profile">Home</Link>
           </li>
           <li className="text-2xl duration-700 ease-in-out font-secondary hover:tracking-widest hover:text-white">
-            <a href="#"> &lt;About&gt;</a>
+            <Link to="/my-profile">About</Link>
           </li>
           <li className="text-2xl duration-700 ease-in-out font-secondary hover:tracking-widest hover:text-white">
-            <a href="#"> &lt;Contact&gt;</a>
+            <Link to="/my-profile">Contact</Link>
           </li>
         </ul>
       </nav>
