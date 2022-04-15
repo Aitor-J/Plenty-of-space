@@ -4,7 +4,11 @@ const HomeFrame = ({ name, desc, img }) => {
   console.log(name);
   return (
     <div className={`${img} bg-no-repeat bg-cover bg-center`}>
+<<<<<<< Updated upstream
       <div className="h-full  bg-gray-50/50 w-80 mx-72 contrast-200">
+=======
+      <div className="h-full bg-gray-50/50 w-80 mx-72 contrast-200">
+>>>>>>> Stashed changes
         <div className="p-6 space-y-6">
           <h1 className="text-5xl font-bold text-center text-white shadow-current ">
             {name}
