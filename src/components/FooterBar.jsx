@@ -3,7 +3,7 @@ import logo from "../assets/LogoPlenty.png";
 
 const Footer = () => {
   return (
-    <footer className="absolute bottom-0 z-10 w-full ml-0">
+    <footer className="bottom-0 z-10 w-full ml-0 ">
       <div className="md:flex md:justify-between md">
         <div className="mb-6 md:mb-0">
           <a href="//ok" className="flex items-center">

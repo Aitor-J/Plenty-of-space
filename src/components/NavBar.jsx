@@ -4,8 +4,8 @@ import logo from "../assets/images/logo.png";
 
 const NavBar = () => {
   return (
-    <div className="absolute z-10 w-full mt-0 ml-0 bg-transparent ">
-      <div className="flex flex-row justify-center py-[2vh]">
+    <div className="z-10 w-full mt-0 ml-0 ">
+      <div className="flex justify-center py-[2vh]">
         <a href="/" className="self-center h-16 mr-3">
           <img
             className="self-center h-16 mr-3"
@@ -22,14 +22,29 @@ const NavBar = () => {
       </div>
       <nav className="text-slate-400">
         <ul className="flex flex-row justify-around py-[4vh]">
-          <li className="text-2xl duration-700 ease-in-out font-secondary hover:tracking-widest hover:text-white">
-            <Link to="/">Home</Link>
+          <li className="relative text-2xl font-secondary ">
+            <Link
+              className="absolute duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white"
+              to="/"
+            >
+              Home
+            </Link>
           </li>
-          <li className="text-2xl duration-700 ease-in-out font-secondary hover:tracking-widest hover:text-white">
-            <Link to="/about">About</Link>
+          <li className="relative text-2xl font-secondary ">
+            <Link
+              className="absolute duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white"
+              to="/about"
+            >
+              About
+            </Link>
           </li>
-          <li className="text-2xl duration-700 ease-in-out font-secondary hover:tracking-widest hover:text-white">
-            <Link to="/contact">Contact</Link>
+          <li className="relative text-2xl font-secondary ">
+            <Link
+              className="absolute duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white"
+              to="/contact"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
