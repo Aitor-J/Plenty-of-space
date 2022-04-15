@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 const HomeBody = ({ image }) => {
   return (
-    <div className="relative w-full ">
+    <div>
       <div
-        className={`${image} absolute min-h-screen top-0 left-0 flex items-center justify-center w-full h-full bg-cover cursor-auto `}
+        className={`${image} bg-bottom py-80 top-0 left-0 flex items-center justify-center bg-cover cursor-auto`}
       >
-        <div className="w-full p-72">
+        <div className="w-1/2">
           <p className="text-lg text-center text-white font-title">
             First Range
           </p>

@@ -11,7 +11,7 @@ import About from "./components/About";
 function App() {
   const background = {
     text: "Wormhole",
-    image: "bg-[url('./src/assets/wormhole.jpg')]",
+    image: "bg-[url('./src/assets/images/background.jpg')]",
   };
   axios
     .get(
@@ -22,10 +22,10 @@ function App() {
     });
 
   return (
-    <div className="App">
+    <div className={background.image}>
       <NavBar />
       <Routes>
-        <Route path="/" element={<HomeBody {...background} />} />
+        <Route path="/" element={<HomeBody />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
