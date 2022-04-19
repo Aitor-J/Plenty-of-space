@@ -14,7 +14,7 @@ const Background = () => {
         <img
           src="./src/assets/images/Mars1.png"
           alt="erer"
-          className="mt-32 scale-110 "
+          className="mt-32 scale-11 "
         />
       </div>
     </div>
