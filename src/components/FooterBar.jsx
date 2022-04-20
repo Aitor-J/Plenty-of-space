@@ -3,19 +3,19 @@ import logo from "../assets/LogoPlenty.png";
 
 const Footer = () => {
   return (
-    <footer className="p-4 bg-black sm:p-6">
-      <div className="md:flex md:justify-between">
+    <footer className="bottom-0 z-10 w-full ml-0 ">
+      <div className="md:flex md:justify-between md">
         <div className="mb-6 md:mb-0">
           <a href="//ok" className="flex items-center">
             <img src={logo} className="h-16 mr-4" alt="Logo" />
-            <span className="self-center text-2xl font-semibold text-white font-title whitespace-nowrap">
+            <span className="self-center text-sm font-semibold text-white font-title whitespace-nowrap">
               Plenty Of Space
             </span>
           </a>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
+            <h2 className="mb-6 font-bold text-white uppercase text-ls dark:text-white">
               Resources
             </h2>
             <ul className="text-gray-600 dark:text-gray-400">
@@ -32,7 +32,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
+            <h2 className="mb-6 font-bold text-white uppercase text-ls dark:text-white">
               Follow us
             </h2>
             <ul className="text-gray-600 dark:text-gray-400">
@@ -55,7 +55,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
+            <h2 className="mb-6 font-bold text-white uppercase text-ls dark:text-white">
               Legal
             </h2>
             <ul className="text-gray-600 dark:text-gray-400">
@@ -75,7 +75,7 @@ const Footer = () => {
       </div>
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <span className="text-xs text-gray-500 sm:text-center dark:text-gray-400">
           © 2022{" "}
           <a href="https://flowbite.com" className="hover:underline">
             Plenty Of Space™

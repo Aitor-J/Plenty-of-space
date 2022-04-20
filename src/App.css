@@ -1,14 +1,18 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-    font-family: "space age";
-    src: url("./assets/fonts/space age.ttf")
+  font-family: "space age";
+  src: url("./assets/fonts/space age.ttf");
 }
 
 @font-face {
-    font-family: "Audiowide";
-    src: url("./assets/fonts/Audiowide-Regular.ttf")
+  font-family: "Audiowide";
+  src: url("./assets/fonts/Audiowide-Regular.ttf");
+}
+
+@font-face {
+  font-family: "VT323";
+  src: url("./assets/fonts/VT323-Regular.ttf");
 }
