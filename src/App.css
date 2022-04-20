@@ -11,3 +11,8 @@
   font-family: "Audiowide";
   src: url("./assets/fonts/Audiowide-Regular.ttf");
 }
+
+@font-face {
+  font-family: "VT323";
+  src: url("./assets/fonts/VT323-Regular.ttf");
+}

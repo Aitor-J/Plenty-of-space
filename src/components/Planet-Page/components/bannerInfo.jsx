@@ -10,7 +10,7 @@ const Banner = () => {
         </p>
         <p className="flex text-sm"> </p>
         <p className="flex pt-16 pb-16 font-mono text-xs text-gray-400 ">
-          if luxuriants forests, bluesky and birds singings are not you'r cup of
+          if luxuriants forests, bluesky and birds singings are not your cup of
           tea but instead 14 miles high trecks and red sand, then you are into
           the right spot!
         </p>

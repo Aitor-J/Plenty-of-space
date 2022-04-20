@@ -4,6 +4,7 @@ module.exports = {
     fontFamily: {
       title: ["space age"],
       secondary: ["Audiowide"],
+      terminal: ["VT323"],
       mono: ["ui-monospace", "SFMono-Regular"],
       display: ["Oswald"],
       body: ['"Open Sans"'],
