@@ -22,80 +22,80 @@ const HomeBody = ({ image }) => {
     <div className={background.image}>
       <NavBar />
 
-      <div className="flex content-around flex-row py-[2vh] w-full z-50 mt-[25vh] ">
-        <div className="flex-initial">
-          {" "}
-          <a href="/" className="flex justify-center">
+      <div className="flex content-around  justify-center py-[2vh] w-full z-50 mt-[25vh] ">
+        {/* <div className="flex-initial"> */}{" "}
+        <a href="/">
+          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
             <img
-              className="w-1/2 duration-700 ease-in-out animate-spinslow hover:w-3/4"
+              className="w-1/2 p-0 m-0 animate-spinslow "
               src={mercure}
               alt="logo plenty of space"
             />
-          </a>
-        </div>
-        <div className="flex-initial ">
-          <a href="/" className="flex justify-center">
+          </div>
+        </a>
+        <a href="/">
+          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
             <img
-              className="w-1/2 duration-700 ease-in-out animate-spinslow hover:w-3/4"
-              src={venus}
-              alt="logo plenty of space"
-            />
-          </a>
-        </div>
-        <div className="flex-initial">
-          <a href="/" className="flex justify-center">
-            <img
-              className="flex justify-center w-1/2 duration-700 ease-in-out animate-spinslow hover:w-3/4"
-              src={terre}
-              alt="logo plenty of space"
-            />
-          </a>
-        </div>
-        <div className="flex-initial">
-          <a href="/" className="flex justify-center">
-            <img
-              className="flex justify-center w-1/2 duration-700 ease-in-out animate-spinslow hover:w-3/4"
-              src={mars}
-              alt="logo plenty of space"
-            />
-          </a>
-        </div>
-        <div className="flex-initial">
-          <a href="/" className="flex justify-center">
-            <img
-              className="flex justify-center w-1/2 duration-700 ease-in-out animate-spinslow hover:w-3/4"
-              src={jup}
-              alt="logo plenty of space"
-            />
-          </a>
-        </div>
-        <div className="flex-initial">
-          <a href="/" className="flex justify-center">
-            <img
-              className="flex justify-center w-1/2 duration-700 ease-in-out animate-spinslow hover:w-3/4"
-              src={saturne}
-              alt="logo plenty of space"
-            />
-          </a>
-        </div>
-        <div className="flex-initial">
-          <a href="/" className="flex justify-center">
-            <img
-              className="flex justify-center w-1/2 duration-700 ease-in-out animate-spinslow hover:w-3/4"
-              src={uranus}
-              alt="logo plenty of space"
-            />
-          </a>
-        </div>
-        <div className="flex-initial">
-          <a href="/" className="flex justify-center">
-            <img
-              className="flex justify-center w-1/2 duration-700 ease-in-out animate-spinslow hover:w-3/4"
+              className="w-1/2 p-0 m-0 animate-spinslow "
               src={neptune}
               alt="logo plenty of space"
             />
-          </a>
-        </div>
+          </div>
+        </a>
+        <a href="/">
+          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
+            <img
+              className="w-1/2 p-0 m-0 animate-spinslow "
+              src={terre}
+              alt="logo plenty of space"
+            />
+          </div>
+        </a>
+        <a href="/">
+          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
+            <img
+              className="w-1/2 p-0 m-0 animate-spinslow "
+              src={mars}
+              alt="logo plenty of space"
+            />
+          </div>
+        </a>
+        <a href="/">
+          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
+            <img
+              className="w-1/2 p-0 m-0 animate-spinslow "
+              src={saturne}
+              alt="logo plenty of space"
+            />
+          </div>
+        </a>
+        <a href="/">
+          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
+            <img
+              className="w-1/2 p-0 m-0 animate-spinslow "
+              src={jup}
+              alt="logo plenty of space"
+            />
+          </div>
+        </a>
+        <a href="/">
+          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
+            <img
+              className="w-1/2 p-0 m-0 animate-spinslow "
+              src={uranus}
+              alt="logo plenty of space"
+            />
+          </div>
+        </a>
+        <a href="/">
+          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
+            <img
+              className="w-1/2 p-0 m-0 animate-spinslow "
+              src={venus}
+              alt="logo plenty of space"
+            />
+          </div>
+        </a>
       </div>
 
       <div
