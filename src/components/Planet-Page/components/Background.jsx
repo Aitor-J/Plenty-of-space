@@ -2,7 +2,7 @@ import React from "react";
 
 const Background = () => {
   return (
-    <div className="flex justify-end min-h-screen bg-black">
+    <div className="absolute flex justify-end min-h-screen bg-black">
       <div className="mt-32 -ml-40">
         <img
           src="./src/assets/images/mars-background2.png"
@@ -14,7 +14,7 @@ const Background = () => {
         <img
           src="./src/assets/images/Mars1.png"
           alt="erer"
-          className="mt-32 scale-110 "
+          className="mt-32 scale-11 "
         />
       </div>
     </div>
