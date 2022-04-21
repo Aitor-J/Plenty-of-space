@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import PropTypes from "prop-types";
 import NavBar from "./NavBar";
 import FooterBar from "./FooterBar";
-
 import jup from "../assets/images/Jupiter.png";
 import mars from "../assets/images/Mars.png";
 import mercure from "../assets/images/Mercure.png";
@@ -52,13 +52,17 @@ const HomeBody = ({ image }) => {
           </div>
         </a>
         <a href="/">
-          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
-            <img
-              className="w-1/2 p-0 m-0 animate-spinslow "
-              src={mars}
-              alt="logo plenty of space"
-            />
-          </div>
+          <Link to="/homebody/mars">
+            {" "}
+            <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
+              {" "}
+              <img
+                className="w-1/2 p-0 m-0 animate-spinslow "
+                src={mars}
+                alt="logo plenty of space"
+              />
+            </div>{" "}
+          </Link>
         </a>
         <a href="/">
           <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">

@@ -1,15 +1,11 @@
 import "./App.css";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
-// import NavBar from "./components/NavBar";
-// import Footer from "./components/FooterBar";
 import HomeBody from "./components/HomeBody";
 import HomePage from "./components/HomePage";
-
 import Contact from "./components/Contact";
 import About from "./components/About";
-// import NavBar from "./components/NavBar";
-// import PlanetFrame from "./components/Planet-Page/PlanetFrame";
+import PlanetFrame from "./components/Planet-Page/PlanetFrame";
 
 function App() {
   axios
@@ -27,6 +23,7 @@ function App() {
         <Route path="/homebody" element={<HomeBody />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/homebody/mars" element={<PlanetFrame />} />
       </Routes>
     </div>
   );
