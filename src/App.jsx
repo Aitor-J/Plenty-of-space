@@ -7,7 +7,7 @@ import HomeBody from "./components/HomeBody";
 import HomePage from "./components/HomePage";
 
 import Contact from "./components/Contact";
-import HomeFrame from "./components/House-Page/HomeFrame";
+// import HomeFrame from "./components/House-Page/HomeFrame";
 import About from "./components/About";
 // import NavBar from "./components/NavBar";
 // import PlanetFrame from "./components/Planet-Page/PlanetFrame";

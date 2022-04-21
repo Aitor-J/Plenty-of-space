@@ -2,60 +2,76 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="w-full h-screen bg-[url('./src/assets/images/space.jpg')]">
-      <div className="bg-no-repeat bg-cover bg-center">
-        <div className="text-center">
-          <form className=" mx-auto  rounded-md p-16 flex flex-col sm:flex-row sm:justify-evenly">
-            <div className="p-16 flex flex-col h-full w-full bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 border border-gray-100 ">
-              <h1 className="text-lg sm:text-4xl font-semibold tracking-wide mb-2">
-                CONTACT US
-              </h1>
-              <div>
-                <div>
+    <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+      >
+        <source
+          src="./src/assets/video/TheSunInTheSpace.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      <div className="font-secondary grid grid-cols-12 relative z-30 opacity-60 ">
+        <div className="col-span-4 text-white font-sans font-bold bg-black min-h-screen pl-7">
+          <div className=" relative grid grid-rows-6 grid-flow-col min-h-screen items-center justify-items-start">
+            <div className="row-span-4 row-start-2 text-4xl">
+              <div className="pt-10 pr-20">
+                <label htmlFor="name_input" className="text-sm font-sans">
+                  Name
                   <input
                     type="text"
-                    placeholder="Firstname"
-                    className="   rounded-xl  border-red-100 opacity-40 placeholder:text-center text-black placeholder:text-lg focus:outline-none  text-2xl p-2 mt-3 "
+                    name="username"
+                    placeholder="Write your Name"
+                    className="w-full bg-black py-3 px-12 border hover: border-gray-500 rounded shadow text-sm font-sans"
                   />
-                </div>
-                <input
-                  type="text"
-                  placeholder="Laststname"
-                  className=" rounded-xl  border-red-100 opacity-40 placeholder:text-center text-black placeholder:text-lg focus:outline-none  text-2xl p-2 mt-3 "
-                />
+                </label>
               </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className=" rounded-xl  border-red-100 opacity-40 placeholder:text-center text-black placeholder:text-lg focus:outline-none  text-2xl p-2 mt-3 "
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="Latitude"
-                  className=" rounded-xl  border-red-100 opacity-40 placeholder:text-center text-black placeholder:text-lg focus:outline-none  text-2xl p-2 mt-3  "
-                />
-                <div>
+              <div className="pt-2 pr-20">
+                <label
+                  htmlFor="email_input"
+                  className="text-sm font-sans font-medium"
+                >
+                  Email
                   <input
                     type="password"
-                    placeholder="Longitude"
-                    className=" rounded-xl  border-red-100 opacity-40 placeholder:text-center text-black placeholder:text-lg focus:outline-none  text-2xl p-2 mt-3 "
+                    name="password"
+                    placeholder="Write your email"
+                    className=" w-full bg-black py-3 px-12 border hover: border-gray-500 rounded shadow text-sm font-sans"
                   />
-                </div>
+                </label>
               </div>
-              <button
-                type="submit"
-                className="  bg-white opacity-30 hover:bg-blue-900 text-black text-2xl p-2 rounded-xl mt-3"
-              >
-                Submit
-              </button>
+              <div className="pt-2 pr-20 ">
+                <label
+                  htmlFor="message_input"
+                  className="text-sm font-sans font-medium"
+                >
+                  Message
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Write your message"
+                    className=" w-full bg-black py-20 px-12 border hover: border-gray-500 rounded shadow text-sm font-sans"
+                  />
+                </label>
+              </div>
+              <div className="text-sm font-sans font-medium w-full pr-20 pt-14">
+                <button
+                  type="button"
+                  className="text-center w-full py-4 bg-blue-900 hover:bg-indigo-900 rounded-md text-white"
+                >
+                  SEND
+                </button>
+              </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

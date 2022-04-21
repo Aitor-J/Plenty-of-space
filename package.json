@@ -10,6 +10,7 @@
     "fix": "prettier --write . && eslint --fix --ext .jsx ."
   },
   "dependencies": {
+    "animate-text": "^0.3.2",
     "axios": "^0.26.1",
     "crt-terminal": "^1.0.10",
     "forms": "^1.3.2",
@@ -20,7 +21,9 @@
     "react-mk": "^1.1.5",
     "react-player": "^2.10.0",
     "react-router-dom": "^6.3.0",
-    "react-type-animation": "^1.1.2"
+    "react-simple-typewriter": "^3.0.1",
+    "react-type-animation": "^1.1.2",
+    "typing-effect": "^1.1.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
