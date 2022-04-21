@@ -17,7 +17,7 @@ const about = () => {
           Your browser does not support the video tag.
         </video>
 
-        <div className="animate-bounce font-secondary flex flex-col justify-center items-center z-30 text-white text-base font-bold w-1/2 ml-vh10">
+        <div className=" font-secondary flex flex-col justify-center items-center z-30 text-white text-base font-bold w-1/2 ml-vh10 ">
           <h2> ABOUT US</h2>
 
           <div className=" font-secondary flex flex-col justify-center items-center  z-30 text-white text-xs">

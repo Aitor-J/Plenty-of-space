@@ -1,4 +1,5 @@
 import React from "react";
+import Banner from "./Planet-Page/components/bannerInfo";
 
 const Contact = () => {
   return (
@@ -19,15 +20,15 @@ const Contact = () => {
       <div className="font-secondary grid grid-cols-12 relative z-30 opacity-60 ">
         <div className="col-span-4 text-white font-sans font-bold bg-black min-h-screen pl-7">
           <div className=" relative grid grid-rows-6 grid-flow-col min-h-screen items-center justify-items-start">
-            <div className="row-span-4 row-start-2 text-4xl">
-              <div className="pt-10 pr-20">
+            <div className="row-span-4 row-start-2 text-xs">
+              <div className=" pt-10 pr-20 ">
                 <label htmlFor="name_input" className="text-sm font-sans">
                   Name
                   <input
                     type="text"
                     name="username"
                     placeholder="Write your Name"
-                    className="w-full bg-black py-3 px-12 border hover: border-gray-500 rounded shadow text-sm font-sans"
+                    className="w-full opacity-60  text-center py-3 px-12 border hover: border-gray-500 rounded shadow text-xs font-sans"
                   />
                 </label>
               </div>
@@ -41,7 +42,7 @@ const Contact = () => {
                     type="password"
                     name="password"
                     placeholder="Write your email"
-                    className=" w-full bg-black py-3 px-12 border hover: border-gray-500 rounded shadow text-sm font-sans"
+                    className=" w-full opacity-60  text-center py-3 px-12 border hover: border-gray-500 rounded shadow text-xs font-sans"
                   />
                 </label>
               </div>
@@ -55,14 +56,14 @@ const Contact = () => {
                     type="password"
                     name="password"
                     placeholder="Write your message"
-                    className=" w-full bg-black py-20 px-12 border hover: border-gray-500 rounded shadow text-sm font-sans"
+                    className=" w-full opacity-60 text-center py-20 px-12 border hover: border-gray-500 rounded shadow text-xs font-sans"
                   />
                 </label>
               </div>
-              <div className="text-sm font-sans font-medium w-full pr-20 pt-14">
+              <div className="text-sm font-sans font-medium w-full pr-20 pt-8">
                 <button
                   type="button"
-                  className="text-center w-full py-4 bg-blue-900 hover:bg-indigo-900 rounded-md text-white"
+                  className="text-center w-full py-4 bg-sky-800 hover:bg-indigo-900 rounded-md text-white"
                 >
                   SEND
                 </button>
