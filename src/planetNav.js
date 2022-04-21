@@ -17,6 +17,10 @@ const planetNav = [
     img: venus,
   },
   {
+    path: "/",
+    img: earth,
+  },
+  {
     path: "/homebody/mars",
     img: mars,
   },
@@ -32,10 +36,7 @@ const planetNav = [
     path: "/",
     img: uranus,
   },
-  {
-    path: "/",
-    img: earth,
-  },
+
   {
     path: "/",
     img: neptune,
