@@ -23,6 +23,7 @@ module.exports = {
     animation: {
       spinslow: "spin 30s linear infinite",
       wave: "2s ",
+      spinveryslow: "spin 230s linear infinite",
     },
 
     letterSpacing: {

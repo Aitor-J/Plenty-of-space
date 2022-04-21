@@ -2,13 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 
-// xs: "1vw",
-// sm: "2vw",
-// tiny: "3vw",
-// base: "4vw",
-// lg: "5vw",
-// xl: "10vw",
-
 const NavBar = () => {
   return (
     <div className="z-10 w-full mt-0 ml-0 ">
