@@ -9,7 +9,7 @@ const Background = () => {
         <img src={marsb} alt="Marsgauche" />
       </div>
       <div className="w-2/3 mt-[10vh] flex flex-col center">
-        <img src={mars} alt="Marsdroite" />
+        <img src={mars} alt="Marsdroite" className="animate-spinveryslow" />
       </div>
     </div>
   );
