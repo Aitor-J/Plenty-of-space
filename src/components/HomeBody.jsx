@@ -1,105 +1,57 @@
-import React from "react";
-import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import NavBar from "./NavBar";
 import FooterBar from "./FooterBar";
-
-import jup from "../assets/images/Jupiter.png";
-import mars from "../assets/images/Mars.png";
-import mercure from "../assets/images/Mercure.png";
-import venus from "../assets/images/Venus.png";
-import saturne from "../assets/images/saturne.png";
-import terre from "../assets/images/Terre.png";
-import uranus from "../assets/images/Uranus.png";
-import neptune from "../assets/images/Neptune.png";
+import planetNav from "../planetNav";
 
 const background = {
   text: "Wormhole",
   image: "bg-[url('./src/assets/images/stars.png')]",
 };
 
-const HomeBody = ({ image }) => {
+const HomeBody = () => {
+  const [planets, setPlanets] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        `https://www.datastro.eu/api/records/1.0/search/?dataset=donnees-systeme-solaire-solar-system-data&q=&rows=10&sort=-ordre_order&facet=ordre_order&facet=planete_planet&facet=distance_moyenne_average_distance_x10_6_km&facet=diametre_diameter_km&facet=masse_mass_x10_24_kg&facet=periode_de_revolution_an_orbital_period_year&facet=periode_de_rotation_rotation_period_h&facet=gravite_gravity_m_s2&facet=vitesse_orbitale_orbital_velocity_km_s&facet=temperature_moyenne_mean_temperature_degc`
+      )
+      .then((res) => res.data.records)
+      .then((data) => setPlanets(data.slice(1)))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div className={background.image}>
       <NavBar />
 
-      <div className="flex content-around  justify-center py-[2vh] w-full z-50 mt-[25vh] ">
-        {/* <div className="flex-initial"> */}{" "}
-        <a href="/">
-          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
-            <img
-              className="w-1/2 p-0 m-0 animate-spinslow "
-              src={mercure}
-              alt="logo plenty of space"
-            />
+      <div className="items-center">
+        <div className="flex text-center grid-flow-row  content-around  justify-center my-auto p-1/5 w-full z-50 mt-[20vh]  ">
+          {planetNav.map((planet, index) => (
+            <Link key={index} to={planet.path}>
+              <div className="flex justify-around transition duration-1000 ease-in-out hover:brightness-150 white hover:scale-150">
+                <img
+                  className="justify-center w-1/2 h-full p-0 m-0 w-object-cover animate-spinslow "
+                  src={planet.img}
+                  alt="logo plenty of space"
+                />
+              </div>
+            </Link>
+          ))}
+        </div>
+        <h1>
+          <div className="flex justify-around grid-cols-8 text-xs text-center text-white space-around font-secondary">
+            {planets.map((planet) => (
+              <div className="justify-center w-full gap-10 p-8 m-5 text-center align-middle p-1/5">
+                {planet.fields.planete_planet.split("/", [1])}
+              </div>
+            ))}
           </div>
-        </a>
-        <a href="/">
-          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
-            <img
-              className="w-1/2 p-0 m-0 animate-spinslow "
-              src={neptune}
-              alt="logo plenty of space"
-            />
-          </div>
-        </a>
-        <a href="/">
-          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
-            <img
-              className="w-1/2 p-0 m-0 animate-spinslow "
-              src={terre}
-              alt="logo plenty of space"
-            />
-          </div>
-        </a>
-        <a href="/">
-          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
-            <img
-              className="w-1/2 p-0 m-0 animate-spinslow "
-              src={mars}
-              alt="logo plenty of space"
-            />
-          </div>
-        </a>
-        <a href="/">
-          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
-            <img
-              className="w-1/2 p-0 m-0 animate-spinslow "
-              src={saturne}
-              alt="logo plenty of space"
-            />
-          </div>
-        </a>
-        <a href="/">
-          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
-            <img
-              className="w-1/2 p-0 m-0 animate-spinslow "
-              src={jup}
-              alt="logo plenty of space"
-            />
-          </div>
-        </a>
-        <a href="/">
-          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
-            <img
-              className="w-1/2 p-0 m-0 animate-spinslow "
-              src={uranus}
-              alt="logo plenty of space"
-            />
-          </div>
-        </a>
-        <a href="/">
-          <div className="flex justify-center transition duration-1000 ease-in-out hover:scale-150">
-            <img
-              className="w-1/2 p-0 m-0 animate-spinslow "
-              src={venus}
-              alt="logo plenty of space"
-            />
-          </div>
-        </a>
+        </h1>
       </div>
-
       <div
-        className={`${image} bg-bottom py-40 top-0 left-0 flex items-center justify-center flex-col bg-cover cursor-auto`}
+        className={` bg-bottom py-40 top-0 left-0 flex items-center justify-center flex-col bg-cover cursor-auto`}
       >
         <p className="text-sm text-center text-white font-secondary mb-vh20">
           SET YOUR PREFERENCES AND FIND YOUR DREAM PLANET{" "}
@@ -134,15 +86,25 @@ const HomeBody = ({ image }) => {
             className="w-full h-2.5 form-range appearance-none rounded p-0 bg-white outline-none "
           />
         </div>
+        <div className="relative duration-1000  ease-in-out z-30 bg-opacity-10 hover:bg-opacity-30 bg-transparent backdrop-blur-sm scroll-px-8 rounded-3xl mt-[8vh]">
+          <button
+            type="button"
+            className="text-sm text-white font-secondary  px-[2vw] py-[1vh] hover:tracking-widest hover:text-red-600"
+          >
+            <Link
+              to="/homebody"
+              className="duration-1000 ease-in-out -translate-x-1/2 l-0"
+            >
+              {" "}
+              DISCOVER{" "}
+            </Link>
+          </button>
+        </div>
       </div>
+
       <FooterBar />
     </div>
   );
-};
-
-HomeBody.propTypes = {
-  // text: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
 };
 
 export default HomeBody;
