@@ -3,7 +3,7 @@ import Banner from "./components/bannerInfo";
 
 function PlanetFrame() {
   return (
-    <div>
+    <div className="relative h-screen overflow-hidden">
       <Background />
       <Banner />
     </div>
