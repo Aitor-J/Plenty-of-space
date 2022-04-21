@@ -11,6 +11,8 @@ module.exports = {
     },
     fontSize: {
       xs: "1vw",
+      xsms: "1.3vw",
+      xms: "1.5vw",
       sm: "2vw",
       tiny: "3vw",
       base: "4vw",
@@ -21,6 +23,7 @@ module.exports = {
     animation: {
       spinslow: "spin 30s linear infinite",
       wave: "2s ",
+      spinveryslow: "spin 230s linear infinite",
     },
 
     letterSpacing: {
