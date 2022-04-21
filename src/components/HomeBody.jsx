@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NavBar from "./NavBar";
 import FooterBar from "./FooterBar";
@@ -11,6 +11,7 @@ const background = {
 };
 
 const HomeBody = () => {
+  const [planets, setPlanets] = useState([]);
   const getPlanets = () => {
     axios
       .get(
@@ -18,6 +19,7 @@ const HomeBody = () => {
       )
       .then((res) => {
         console.log(res.data.records[0].fields.planete_planet);
+        setPlanets(res.data.records[0].fields.planete_planet);
       });
   };
   useEffect(() => {
@@ -27,18 +29,20 @@ const HomeBody = () => {
   return (
     <div className={background.image}>
       <NavBar />
-      <div className="flex content-around  justify-center py-[2vh] w-full z-50 mt-[25vh] ">
-        {planetNav.map((planet) => (
-          <Link to={planet.path}>
-            <div className="flex justify-center w-1/2 transition duration-1000 ease-in-out hover:scale-150">
-              <img
-                className="justify-around object-cover w-full h-full my-auto animate-spinslow "
-                src={planet.img}
-                alt="logo plenty of space"
-              />
-            </div>
-          </Link>
-        ))}
+      <div>
+        <div className="flex content-around  justify-center py-[2vh] w-full z-50 mt-[25vh] ">
+          {planetNav.map((planet, index) => (
+            <Link key={index} to={planet.path}>
+              <div className="flex justify-center w-1/2 my-auto transition duration-1000 ease-in-out hover:scale-150">
+                <img
+                  className="justify-around object-cover w-full h-full animate-spinslow "
+                  src={planet.img}
+                  alt="logo plenty of space"
+                />
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
       <div
         className={` bg-bottom py-40 top-0 left-0 flex items-center justify-center flex-col bg-cover cursor-auto`}
