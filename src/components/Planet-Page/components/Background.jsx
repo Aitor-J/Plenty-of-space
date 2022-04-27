@@ -8,8 +8,8 @@ const Background = () => {
       <div className="translate-y-[25vh] -translate-x-[30vh]">
         <img src={marsb} alt="Marsgauche" />
       </div>
-      <div className="w-2/3 mt-[10vh] flex flex-col center">
-        <img src={mars} alt="Marsdroite" className="animate-spinveryslow" />
+      <div className="flex flex-col content-center scale-75">
+        <img src={mars} alt="Marsdroite" className=" animate-spinveryslow" />
       </div>
     </div>
   );

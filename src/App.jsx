@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import HomeBody from "./components/HomeBody";
 import HomePage from "./components/HomePage";
 import Contact from "./components/Contact";
-// import HomeFrame from "./components/House-Page/HomeFrame";
 import About from "./components/About";
 import PlanetFrame from "./components/Planet-Page/PlanetFrame";
 
