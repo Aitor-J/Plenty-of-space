@@ -17,9 +17,7 @@ const NavBar = () => {
           PLENTY OF SPACE
         </h1>
       </div>
-      <div className="flex justify-center">
-        {/* <div className="bg-white w-11/12 py-[0.1vh] "></div> */}
-      </div>
+      <div className="flex justify-center" />
       <nav className="text-slate-400">
         <ul className="flex flex-row justify-around py-[4vh]">
           <li className="relative text-sm font-secondary ">
