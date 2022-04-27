@@ -1,8 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const about = () => {
   return (
     <div>
+      <Link
+        to="/homebody"
+        className="duration-1000 ease-in-out -translate-x-1/2 l-0"
+      >
+        {" "}
+        <div className="absolute text-lg text-white pb-[80vh] center content-center text-center mt-0 ml-[2vw] z-50">
+          {"<"}
+        </div>{" "}
+      </Link>
       <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
         <video
           autoPlay
@@ -17,7 +27,7 @@ const about = () => {
           Your browser does not support the video tag.
         </video>
 
-        <div className=" font-secondary flex flex-col justify-center items-center z-30 text-white text-base font-bold w-1/2 ml-vh10 ">
+        <div className="z-30 flex flex-col items-center justify-center w-1/2 text-base font-bold text-white font-secondary ml-vh10">
           <h2> ABOUT US</h2>
           <div>
             <div className=" font-secondary flex flex-col justify-center items-center  z-30 text-white text-xs">

@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const Contact = () => {
   return (
-    <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+    <div>
+      {" "}
+      <Link
+        to="/homebody"
+        className="duration-1000 ease-in-out -translate-x-1/2 l-0"
       >
         <source
           src="./src/assets/videos/TheSunInTheSpace.mp4"
@@ -70,8 +71,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 };
 

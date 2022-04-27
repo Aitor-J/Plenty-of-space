@@ -49,11 +49,10 @@ const HomePage = () => {
           <Cursor />
           <br />
         </div>
-
         <div className="absolute duration-1000 ease-in-out z-30 bg-opacity-10 hover:bg-opacity-30 bg-transparent backdrop-blur-sm scroll-px-8 rounded-3xl mt-[72vh]">
           <button
             type="button"
-            className="text-sm text-white font-secondary  px-[2vw] py-[1vh] hover:tracking-widest"
+            className="text-sm text-white font-secondary  px-[2vw] py-[1vh] hover:tracking-widest hover:text-red-600"
           >
             <Link
               to="/homebody"

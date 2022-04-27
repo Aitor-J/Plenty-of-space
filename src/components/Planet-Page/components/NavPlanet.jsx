@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavPlanet = () => {
   return (
-    <div className="absolute w-1/4 text-white top-[5vh] left-[135vh] ">
+    <div className="absolute w-1/4 text-white top-[5vh] right-[10vw] ">
       <ul className="flex justify-between space-x-40">
         <li className="font-secondary">
           {" "}

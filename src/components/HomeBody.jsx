@@ -30,7 +30,7 @@ const HomeBody = () => {
         <div className="flex text-center grid-flow-row  content-around  justify-center my-auto p-1/5 w-full z-50 mt-[20vh]  ">
           {planetNav.map((planet, index) => (
             <Link key={index} to={planet.path}>
-              <div className="flex justify-around transition duration-1000 ease-in-out opacity-70 hover:opacity-100 white hover:scale-150">
+              <div className="flex justify-around transition duration-1000 ease-in-out hover:brightness-150 white hover:scale-150">
                 <img
                   className="justify-center w-1/2 h-full p-0 m-0 w-object-cover animate-spinslow "
                   src={planet.img}

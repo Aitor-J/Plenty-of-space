@@ -6,7 +6,9 @@ const footerInfo = () => {
       <ul className="flex justify-between space-x-40 ">
         <li className="w-15 font-secondary">
           EXOSPHERE
-          <p className="py-2 font-mono text-xs text-gray-400">blabla</p>
+          <p className="py-2 font-mono text-xs text-gray-400">
+            Containing hydrogen and helium
+          </p>
         </li>
 
         <li className="w-15 font-secondary">
