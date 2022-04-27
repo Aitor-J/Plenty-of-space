@@ -54,7 +54,7 @@ const HomeBody = () => {
         className={` bg-bottom py-40 top-0 left-0 flex items-center justify-center flex-col bg-cover cursor-auto`}
       >
         <p className="text-sm text-center text-white font-secondary mb-vh20">
-          SET YOUR PREFERENCES AND FIND YOUR DREAM PLANET{" "}
+          SET YOUR PREFERENCES AND FIND YOUR DREAM PLANET
         </p>
         <div className="w-1/2">
           <p className="text-sm text-center text-gray-400 font-secondary">
@@ -95,8 +95,7 @@ const HomeBody = () => {
               to="/homebody"
               className="duration-1000 ease-in-out -translate-x-1/2 l-0"
             >
-              {" "}
-              DISCOVER{" "}
+              DISCOVER
             </Link>
           </button>
         </div>
