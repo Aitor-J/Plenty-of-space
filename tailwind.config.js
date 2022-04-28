@@ -7,7 +7,7 @@ module.exports = {
       terminal: ["VT323"],
       mono: ["ui-monospace", "SFMono-Regular"],
       display: ["Oswald"],
-      body: ['"Open Sans"'],
+      body: ["Open Sans"],
     },
     fontSize: {
       xs: "1vw",
