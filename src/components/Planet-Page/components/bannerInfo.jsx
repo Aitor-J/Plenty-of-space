@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../../../App.css";
 
 const Banner = ({ name, subtitle, desc }) => {
   return (
@@ -10,7 +11,7 @@ const Banner = ({ name, subtitle, desc }) => {
           {subtitle}
         </p>
         <p className="flex text-sm"> </p>
-        <p className="flex pt-[5vh] pb-16 font-mono text-xsms text-gray-400 ">
+        <p className="flex pt-[5vh] pb-16 font-nunito text-xsms text-gray-400 text-shadow-lg">
           {desc}
         </p>
       </div>

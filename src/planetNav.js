@@ -2,17 +2,19 @@ import mercure from "./assets/images/1-mercure.png";
 import venus from "./assets/images/2-venus.png";
 import mars from "./assets/images/3-mars.png";
 import jupiter from "./assets/images/4-jupiter.png";
-import saturn from "./assets/images/saturne.png";
 import uranus from "./assets/images/6-uranus.png";
 import neptune from "./assets/images/7-neptune.png";
-import earth from "./assets/images/earth.png";
+import earth from "./assets/images/3-earth.png";
 import mercureb from "./assets/images/1-mercure-blur.png";
 import venusb from "./assets/images/2-venus-blur.png";
 import marsb from "./assets/images/3-mars-blur.png";
 import jupiterb from "./assets/images/4-jupiter-blur.png";
+import saturn from "./assets/images/5-saturn.png";
+import saturna from "./assets/images/5-saturn-back.jpg";
 import saturnb from "./assets/images/5-saturn-blur.png";
 import uranusb from "./assets/images/6-uranus-blur.png";
 import neptuneb from "./assets/images/7-neptune-blur.png";
+import earthb from "./assets/images/3-earth-blur.png";
 
 const planetNav = [
   {
@@ -40,7 +42,7 @@ const planetNav = [
     desc: "You are lost my friend, you made a huge jump space, lydie invaded earth with the help of her dinosaurs, while Jimmy organise the resistance, is there any hope left?",
     path: "/homebody/earth",
     img: earth,
-    blur: earth,
+    blur: earthb,
   },
   {
     id: 4,
@@ -68,6 +70,7 @@ const planetNav = [
     path: "/homebody/saturn",
     img: saturn,
     blur: saturnb,
+    imgb: saturna,
   },
   {
     id: 7,

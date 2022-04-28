@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Keyboard, { Cursor } from "react-mk";
+import video from "../assets/videos/hpvideo.mp4";
 
 const HomePage = () => {
   const audio = new Audio("./src/assets/sounds/sc2.mp3");
@@ -69,10 +70,7 @@ const HomePage = () => {
           muted
           className="absolute z-10 w-auto min-w-full min-h-full max-w-none playsinline object-fit"
         >
-          <source
-            src="./src/assets/videos/backgroundvideohomepage.mp4"
-            type="video/mp4"
-          />
+          <source src={video} type="video/mp4" />
         </video>
       </header>
     </div>
