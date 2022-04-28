@@ -25,6 +25,7 @@ const planetNav = [
     path: "/homebody/mercury",
     img: mercure,
     blur: mercureb,
+    imgb: saturna,
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ const planetNav = [
     path: "/homebody/venus",
     img: venus,
     blur: venusb,
+    imgb: saturna,
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ const planetNav = [
     path: "/homebody/earth",
     img: earth,
     blur: earthb,
+    imgb: saturna,
   },
   {
     id: 4,
@@ -52,6 +55,7 @@ const planetNav = [
     path: "/homebody/mars",
     img: mars,
     blur: marsb,
+    imgb: saturna,
   },
   {
     id: 5,
@@ -61,6 +65,7 @@ const planetNav = [
     path: "/homebody/jupiter",
     img: jupiter,
     blur: jupiterb,
+    imgb: saturna,
   },
   {
     id: 6,
@@ -80,6 +85,7 @@ const planetNav = [
     path: "/homebody/uranus",
     img: uranus,
     blur: uranusb,
+    imgb: saturna,
   },
 
   {
@@ -90,6 +96,7 @@ const planetNav = [
     path: "/homebody/neptune",
     img: neptune,
     blur: neptuneb,
+    imgb: saturna,
   },
 ];
 
