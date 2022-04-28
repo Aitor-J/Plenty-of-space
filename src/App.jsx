@@ -14,7 +14,7 @@ function App() {
         <Route path="/homebody" element={<HomeBody />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/homebody/mars" element={<PlanetFrame />} />
+        <Route path="/homebody/:planetName" element={<PlanetFrame />} />
       </Routes>
     </div>
   );

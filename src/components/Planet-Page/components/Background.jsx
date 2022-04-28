@@ -1,18 +1,21 @@
 import React from "react";
-import mars from "../../../assets/images/3-mars.png";
-import marsb from "../../../assets/images/3-mars-blur.png";
+import PropTypes from "prop-types";
 
-const Background = () => {
+const Background = ({ img, blur }) => {
   return (
     <div className="flex min-h-screen bg-black ">
       <div className="translate-y-[25vh] -translate-x-[30vh]">
-        <img src={marsb} alt="Marsgauche" />
+        <img src={blur} alt="Marsgauche" />
       </div>
       <div className="flex flex-col content-center scale-75">
-        <img src={mars} alt="Marsdroite" className=" animate-spinveryslow" />
+        <img src={img} alt="Marsdroite" className=" animate-spinveryslow" />
       </div>
     </div>
   );
+};
+Background.propTypes = {
+  img: PropTypes.string.isRequired,
+  blur: PropTypes.string.isRequired,
 };
 
 export default Background;

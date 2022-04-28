@@ -4,6 +4,7 @@ import axios from "axios";
 import NavBar from "./NavBar";
 import FooterBar from "./FooterBar";
 import planetNav from "../planetNav";
+import utils from "../lib/utils";
 
 const background = {
   text: "Wormhole",
@@ -42,9 +43,12 @@ const HomeBody = () => {
         </div>
         <h1>
           <div className="flex justify-around grid-cols-8 text-xs text-center text-white space-around font-secondary">
-            {planets.map((planet) => (
-              <div className="justify-center w-full gap-10 p-8 m-5 text-center align-middle p-1/5">
-                {planet.fields.planete_planet.split("/", [1])}
+            {planets.map((planet, index) => (
+              <div
+                key={index}
+                className="justify-center w-full gap-10 p-8 m-5 text-center align-middle p-1/5"
+              >
+                {utils.splitPlanet(planet.fields.planete_planet)}
               </div>
             ))}
           </div>
