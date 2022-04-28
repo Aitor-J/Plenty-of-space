@@ -9,7 +9,7 @@ const NavPlanet = () => {
           {" "}
           <Link
             className="absolute duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white"
-            to="/"
+            to="/homebody"
           >
             _HOME
           </Link>

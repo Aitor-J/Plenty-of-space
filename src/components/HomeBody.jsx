@@ -5,11 +5,7 @@ import NavBar from "./NavBar";
 import FooterBar from "./FooterBar";
 import planetNav from "../planetNav";
 import utils from "../lib/utils";
-
-const background = {
-  text: "Wormhole",
-  image: "bg-[url('./src/assets/images/stars.png')]",
-};
+import images from "../assets/images/stars.png";
 
 const HomeBody = () => {
   const [planets, setPlanets] = useState([]);
@@ -24,7 +20,7 @@ const HomeBody = () => {
   }, []);
 
   return (
-    <div className={background.image}>
+    <div style={{ backgroundImage: `url(${images})` }}>
       <NavBar />
 
       <div className="items-center">
