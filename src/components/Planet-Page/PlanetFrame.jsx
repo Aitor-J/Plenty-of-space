@@ -42,7 +42,9 @@ function PlanetFrame() {
       {planetBackground.img && planetBackground.blur && (
         <Background {...planetBackground} />
       )}
-      <Banner />
+      {planetBackground.name &&
+        planetBackground.subtitle &&
+        planetBackground.desc && <Banner {...planetBackground} />}
       <FooterInfo {...planetInfo} />
       <NavPlanet />
     </div>
