@@ -32,7 +32,7 @@ function PlanetFrame() {
           );
         });
 
-        setPlanetInfo(planetData.fields);
+        setPlanetInfo(utils.renameKey(planetData.fields));
       });
     getPlanetPics();
   }, [planetName]);

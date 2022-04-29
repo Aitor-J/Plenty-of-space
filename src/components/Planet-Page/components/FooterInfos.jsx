@@ -1,6 +1,13 @@
 import "../../../App.css";
 
-const footerInfo = (props) => {
+const footerInfo = ({
+  graviteGravityMS2,
+  diametreDiameterKm,
+  atmosphericComposition,
+  temperatureMaxHighestTemperatureDegc,
+  temperatureMinLowestTemperatureDegc,
+  typeDAstreTypeOfPlanet,
+}) => {
   return (
     <div className="absolute w-2/3 text-white bottom-[5vh] left-1/3 ">
       <ul className="flex justify-between space-x-40 ">
@@ -11,11 +18,11 @@ const footerInfo = (props) => {
               {" "}
               Atmospheric composition:
             </span>{" "}
-            {props.atmospheric_composition} <br />
+            {atmosphericComposition} <br />
             <span className="font-bold tracking-wider text-gray-400 underline">
               Gravity:
             </span>{" "}
-            {props.gravite_gravity_m_s2}
+            {graviteGravityMS2}
           </p>
         </li>
 
@@ -26,11 +33,11 @@ const footerInfo = (props) => {
               {" "}
               Max temperature:{" "}
             </span>
-            {props.temperature_max_highest_temperature_degc} <br />
+            {temperatureMaxHighestTemperatureDegc} <br />
             <span className="font-bold tracking-wider text-gray-400 underline">
               Min temperature:
             </span>{" "}
-            {props.temperature_min_lowest_temperature_degc}
+            {temperatureMinLowestTemperatureDegc}
           </p>
         </li>
         <li className=" w-15 pr-[10vh] font-secondary">
@@ -40,12 +47,12 @@ const footerInfo = (props) => {
               {" "}
               Diameter:
             </span>{" "}
-            {props.diametre_diameter_km} km <br />
+            {diametreDiameterKm} km <br />
             <span className="font-bold tracking-wider text-gray-400 underline">
               {" "}
               Planet type:
             </span>{" "}
-            {props.type_d_astre_type_of_planet}
+            {typeDAstreTypeOfPlanet}
           </p>
         </li>
       </ul>
