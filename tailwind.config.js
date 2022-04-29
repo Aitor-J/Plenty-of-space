@@ -3,11 +3,14 @@ module.exports = {
   theme: {
     fontFamily: {
       title: ["space age"],
+      nunito: ["nunito"],
       secondary: ["Audiowide"],
       terminal: ["VT323"],
       mono: ["ui-monospace", "SFMono-Regular"],
       display: ["Oswald"],
-      body: ['"Open Sans"'],
+      body: ["OpenSans"],
+      test: ["OpenSans"],
+      essai: ["sanspro"],
     },
     fontSize: {
       xs: "1vw",
@@ -32,7 +35,7 @@ module.exports = {
       tight: "-.025em",
       normal: "0",
       wide: ".025em",
-      wider: ".05em",
+      wider: ".1em",
       widest: "0.3em",
     },
     plugins: {
