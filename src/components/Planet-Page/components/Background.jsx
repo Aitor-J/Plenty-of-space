@@ -11,7 +11,7 @@ const Background = ({ img, blur, name, imgb }) => {
             : "translate-y-[25vh] -translate-x-[30vh]"
         }
       >
-        <img src={blur} alt="planetleftblur" />
+        <img src={name === "saturn" ? "" : blur} alt="planetleftblur" />
       </div>
       <div
         className={
