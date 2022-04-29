@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const HomeFrame = ({ name, desc, img }) => {
-  console.log(name);
+const HomeFrame = ({ name, desc, image }) => {
   return (
-    <div className={`${img} bg-no-repeat bg-cover bg-center`}>
+    <div className={`${image} bg-no-repeat bg-cover bg-center`}>
       <div className="h-full bg-gray-50/50 w-80 mx-72 contrast-200">
         <div className="p-6 space-y-6">
           <h1 className="text-5xl font-bold text-center text-white shadow-current ">
@@ -28,7 +27,7 @@ const HomeFrame = ({ name, desc, img }) => {
 HomeFrame.propTypes = {
   name: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default HomeFrame;

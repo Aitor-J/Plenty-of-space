@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NavContact from "./NavContact";
 
 const Contact = () => {
   return (
@@ -19,7 +20,7 @@ const Contact = () => {
           autoPlay
           loop
           muted
-          className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+          className="absolute w-auto min-w-full min-h-full max-w-none"
         >
           <source
             src="./src/assets/videos/TheSunInTheSpace.mp4"
@@ -86,6 +87,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <NavContact />
       </header>
     </div>
   );

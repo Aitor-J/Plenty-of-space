@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NavAbout from "./Planet-Page/components/NavAbout";
 
 const about = () => {
   return (
     <div>
       <Link
         to="/homebody"
-        className="duration-1000 ease-in-out -translate-x-1/2 l-0"
+        className="duration-1000 ease-in-out -translate-x-1/2 "
       >
-        {" "}
         <div className="absolute text-lg text-white pb-[80vh] center content-center text-center mt-0 ml-[2vw] z-50 opacity-60">
           {"<"}
-        </div>{" "}
+        </div>
       </Link>
 
       <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
@@ -62,6 +62,7 @@ const about = () => {
             </div>
           </div>
         </div>
+        <NavAbout />
       </header>
     </div>
   );

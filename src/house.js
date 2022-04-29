@@ -3,7 +3,8 @@ const house = [
     name: "Gigantic Duplex On Uranus",
     type: "Duplex",
     desc: "Mars is the fourth planet in the Solar System in ascending order of distance from the Sun and the second in ascending order of size and mass. Its distance from the Sun is between 1.381 and 1.666 AU (206.6 to 249.2 million kilometers), with an orbital period of 669.58 Martian days (686.71 days or 1.88 Earth years).",
-    img: "bg-[url('https://wallup.net/wp-content/uploads/2018/10/05/959833-sci-fi-futuristic-art-artwork-artistic-original-science-fiction-748x377.jpg')]",
+    imgage:
+      "bg-[url('https://wallup.net/wp-content/uploads/2018/10/05/959833-sci-fi-futuristic-art-artwork-artistic-original-science-fiction-748x377.jpg')]",
   },
   {
     name: "Large condo on Mercury",
