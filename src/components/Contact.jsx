@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import video from "../assets/videos/TheSunInTheSpace.mp4";
 
 const Contact = () => {
   return (
@@ -18,19 +19,17 @@ const Contact = () => {
         <video
           autoPlay
           loop
+          preload="none"
           muted
           className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
         >
-          <source
-            src="./src/assets/videos/TheSunInTheSpace.mp4"
-            type="video/mp4"
-          />
+          <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <div className="relative z-30 grid grid-cols-12 font-secondary opacity-60 ">
-          <div className="min-h-screen col-span-4 font-sans font-bold text-white bg-black pl-20">
-            <div className="relative grid items-center min-h-screen grid-flow-col grid-rows-6  justify-items-start">
+          <div className="min-h-screen col-span-4 pl-20 font-sans font-bold text-white bg-black">
+            <div className="relative grid items-center min-h-screen grid-flow-col grid-rows-6 justify-items-start">
               <div className="row-span-4 row-start-2 text-xs">
                 <div className="pt-10 pr-20 ">
                   <label htmlFor="name_input" className="font-sans text-sm ">
@@ -39,8 +38,8 @@ const Contact = () => {
                       type="text"
                       name="username"
                       placeholder="Write your Name"
-                      className="w-full px-12 py-3 font-sans text-xs text-center border border-gray-500 rounded shadow opacity-60  text-black"
-                      for="grid-password"
+                      className="w-full px-12 py-3 font-sans text-xs text-center text-black border border-gray-500 rounded shadow opacity-60"
+                      htmlFfor="grid-password"
                     />
                   </label>
                 </div>
@@ -48,14 +47,13 @@ const Contact = () => {
                   <label
                     htmlFor="email_input"
                     className="font-sans text-sm font-medium text-white "
-                    for="grid-password"
                   >
                     Email
                     <input
                       type="email"
                       name="email"
                       placeholder="Write your email"
-                      className="w-full px-12 py-3 font-sans text-xs text-center border border-gray-500 rounded shadow  opacity-60 hover text-black"
+                      className="w-full px-12 py-3 font-sans text-xs text-center text-black border border-gray-500 rounded shadow opacity-60 hover"
                     />
                   </label>
                 </div>
@@ -63,21 +61,20 @@ const Contact = () => {
                   <label
                     htmlFor="message_input"
                     className="font-sans text-sm font-medium text-white"
-                    for="grid-password"
                   >
                     Message
                     <input
                       type="text"
                       name="text"
                       placeholder="Write your message"
-                      className="w-full px-12 py-20 font-sans text-xs text-center border border-gray-500 rounded shadow  opacity-60 text-black"
+                      className="w-full px-12 py-20 font-sans text-xs text-center text-black border border-gray-500 rounded shadow opacity-60"
                     />
                   </label>
                 </div>
                 <div className="w-full pt-8 pr-20 font-sans text-sm font-medium">
                   <button
                     type="button"
-                    className="w-full py-4 text-center text-white rounded-md bg-gray-900 hover:bg-sky-900"
+                    className="w-full py-4 text-center text-white bg-gray-900 rounded-md hover:bg-sky-900"
                   >
                     SEND
                   </button>

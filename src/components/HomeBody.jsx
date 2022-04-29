@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import NavBar from "./NavBar";
-import FooterBar from "./FooterBar";
-import planetNav from "../planetNav";
 import utils from "../lib/utils";
-
-const background = {
-  text: "Wormhole",
-  image: "bg-[url('./src/assets/images/stars.png')]",
-};
+import planetNav from "../planetNav";
+import image from "../assets/images/stars.png";
+// import NavBar from "./NavBar";
+const NavBar = React.lazy(() => import("./NavBar"));
+// import FooterBar from "./FooterBar";
+const FooterBar = React.lazy(() => import("./FooterBar"));
 
 const HomeBody = () => {
   const [planets, setPlanets] = useState([]);
@@ -24,7 +22,7 @@ const HomeBody = () => {
   }, []);
 
   return (
-    <div className={background.image}>
+    <div style={{ backgroundImage: `url('${image}')` }}>
       <NavBar />
 
       <div className="items-center">
