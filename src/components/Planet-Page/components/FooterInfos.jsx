@@ -10,7 +10,7 @@ const footerInfo = ({
 }) => {
   return (
     <div className="absolute w-2/3 text-white bottom-[5vh] left-1/3 ">
-      <ul className="flex justify-between space-x-40 ">
+      <ul className="flex justify-between space-x-40 translate-y-10 ">
         <li className="w-15 font-secondary text-shadow-lg ">
           EXOSPHERE
           <p className="py-2 text-xs text-white font-nunito text-shadow-lg ">
