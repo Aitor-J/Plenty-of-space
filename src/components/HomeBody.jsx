@@ -10,11 +10,20 @@ import images from "../assets/images/stars.png";
 
 const HomeBody = () => {
   const [planets, setPlanets] = useState([]);
-  const [minMaxTemp, setMinMaxTemp] = useState({});
-  const [minMaxGrav, setMinMaxGrav] = useState({});
-  const [minMaxRevo, setMinMaxRevo] = useState({});
-  const [minMaxDay, setMinMaxDay] = useState({});
-  console.log(minMaxDay);
+  const [minMax, setMinMax] = useState({
+    temp: { min: 0, max: 0 },
+    grav: { min: 0, max: 0 },
+    revo: { min: 0, max: 0 },
+    day: { min: 0, max: 0 },
+  });
+  const [filter, setFilter] = useState({
+    day: { min: 5.784, max: 3957.168 },
+    grav: { min: 3.7, max: 23.1 },
+    revo: { min: 10, max: 4331 },
+    temp: { min: -200, max: 490 },
+  });
+  const [planetsFiltered, setPlanetsFiltered] = useState([]);
+
   useEffect(() => {
     axios
       .get(
@@ -22,107 +31,107 @@ const HomeBody = () => {
       )
       .then((res) => res.data.records)
       .then((data) => {
-        // set min max TEMPERATURE range slider
-        setMinMaxTemp({
-          ...minMaxTemp,
-          max: Math.max(
-            ...data.slice(1).map((planet) => {
-              return (
-                planet.fields.temperature_max_highest_temperature_degc ||
-                planet.fields.temperature_moyenne_mean_temperature_degc
-              );
-            })
-          ),
-          min: Math.min(
-            ...data.slice(1).map((planet) => {
-              return (
-                planet.fields.temperature_max_highest_temperature_degc ||
-                planet.fields.temperature_moyenne_mean_temperature_degc
-              );
-            })
-          ),
-        });
-        // set min max GRAVITY range slider
-        setMinMaxGrav({
-          ...minMaxGrav,
-          max: Math.max(
-            ...data.slice(1).map((planet) => {
-              return planet.fields.gravite_gravity_m_s2;
-            })
-          ),
-          min: Math.min(
-            ...data.slice(1).map((planet) => {
-              return planet.fields.gravite_gravity_m_s2;
-            })
-          ),
-        });
-
-        // set min max REVOLUTION range slider PARSINT
-        setMinMaxRevo({
-          ...minMaxRevo,
-
-          max: Math.max(
-            ...data.slice(1).map((planet) => {
-              return parseInt(
-                planet.fields.periode_de_revolution_jours_orbital_period_days,
-                10
-              );
-            })
-          ),
-          min: Math.min(
-            ...data.slice(1).map((planet) => {
-              return parseInt(
-                planet.fields.periode_de_revolution_jours_orbital_period_days,
-                10
-              );
-            })
-          ),
-        });
-        // set min max DAYTIME range slider
-
-        setMinMaxDay({
-          ...minMaxDay,
-          max: Math.max(
-            ...data.slice(1).map((planet) => {
-              console.log(
-                planet.fields.periode_de_rotation_rotation_period_h.split(" ")
-              );
-              return (
-                planet.fields.periode_de_revolution_an_orbital_period_year * 24
-              );
-            })
-          ),
-          min: Math.min(
-            ...data.slice(1).map((planet) => {
-              return (
-                planet.fields.periode_de_revolution_an_orbital_period_year * 24
-              );
-            })
-          ),
-        });
-        console.log(
-          data
-            .slice(1)
-            .filter(
-              (dataFinder) =>
-                dataFinder.fields.gravite_gravity_m_s2 >= 9 &&
-                dataFinder.fields.temperature_max_highest_temperature_degc <=
-                  200 &&
-                dataFinder.fields.temperature_min_lowest_temperature_degc >=
-                  -100 &&
-                dataFinder.fields
-                  .periode_de_revolution_an_orbital_period_year <= 5 &&
-                parseInt(
-                  dataFinder.fields.periode_de_rotation_rotation_period_h,
+        setMinMax({
+          ...minMax,
+          // set min max TEMPERATURE range slider
+          temp: {
+            max: Math.max(
+              ...data.slice(1).map((planet) => {
+                return (
+                  planet.fields.temperature_max_highest_temperature_degc ||
+                  planet.fields.temperature_moyenne_mean_temperature_degc
+                );
+              })
+            ),
+            min: Math.min(
+              ...data.slice(1).map((planet) => {
+                return (
+                  planet.fields.temperature_min_lowest_temperature_degc ||
+                  planet.fields.temperature_moyenne_mean_temperature_degc
+                );
+              })
+            ),
+          },
+          // set min max GRAVITY range slider
+          grav: {
+            max: Math.max(
+              ...data.slice(1).map((planet) => {
+                return planet.fields.gravite_gravity_m_s2;
+              })
+            ),
+            min: Math.min(
+              ...data.slice(1).map((planet) => {
+                return planet.fields.gravite_gravity_m_s2;
+              })
+            ),
+          },
+          revo: {
+            // set min max REVOLUTION range slider PARSINT
+            max: Math.max(
+              ...data.slice(1).map((planet) => {
+                return parseInt(
+                  planet.fields.periode_de_revolution_jours_orbital_period_days,
                   10
-                ) <= 366
-            )
-        );
+                );
+              })
+            ),
+            min: Math.min(
+              ...data.slice(1).map((planet) => {
+                return parseInt(
+                  planet.fields.periode_de_revolution_jours_orbital_period_days,
+                  10
+                );
+              })
+            ),
+          },
+          day: {
+            // set min max DAYTIME range slider
+            max: Math.max(
+              ...data.slice(1).map((planet) => {
+                return (
+                  planet.fields.periode_de_revolution_an_orbital_period_year *
+                  24
+                );
+              })
+            ),
+            min: Math.min(
+              ...data.slice(1).map((planet) => {
+                return (
+                  planet.fields.periode_de_revolution_an_orbital_period_year *
+                  24
+                );
+              })
+            ),
+          },
+        });
+
         setPlanets(data.slice(1));
       })
       .catch((err) => console.error(err));
   }, []);
 
+  useEffect(() => {
+    const planetFiltered = planets.filter(
+      (planet) =>
+        (planet.fields.temperature_max_highest_temperature_degc ||
+          planet.fields.temperature_moyenne_mean_temperature_degc) <=
+          filter.temp.max &&
+        (planet.fields.temperature_min_lowest_temperature_degc ||
+          planet.fields.temperature_moyenne_mean_temperature_degc) >=
+          filter.temp.min &&
+        planet.fields.gravite_gravity_m_s2 <= filter.grav.max &&
+        planet.fields.gravite_gravity_m_s2 >= filter.grav.min &&
+        Number(planet.fields.periode_de_revolution_jours_orbital_period_days) <=
+          filter.revo.max &&
+        Number(planet.fields.periode_de_revolution_jours_orbital_period_days) >=
+          filter.revo.min &&
+        planet.fields.periode_de_revolution_an_orbital_period_year * 24 <=
+          filter.day.max &&
+        planet.fields.periode_de_revolution_an_orbital_period_year * 24 >=
+          filter.day.min
+    );
+    setPlanetsFiltered(planetFiltered);
+  }, [filter]);
   return (
     <div style={{ backgroundImage: `url(${images})` }}>
       <NavBar />
@@ -168,8 +177,14 @@ const HomeBody = () => {
             defaultValue={[-200, 490]}
             valueLabelDisplay="auto"
             mark={10}
-            min={minMaxTemp.min}
-            max={minMaxTemp.max}
+            min={minMax.temp.min}
+            max={minMax.temp.max}
+            onChange={(e) =>
+              setFilter({
+                ...filter,
+                temp: { min: e.target.value[0], max: e.target.value[1] },
+              })
+            }
           />
         </div>
         <p className="text-sm text-center text-gray-400 font-secondary">
@@ -180,8 +195,14 @@ const HomeBody = () => {
             defaultValue={[3, 25]}
             valueLabelDisplay="auto"
             mark={10}
-            min={minMaxGrav.min}
-            max={minMaxGrav.max}
+            min={minMax.grav.min}
+            max={minMax.grav.max}
+            onChange={(e) =>
+              setFilter({
+                ...filter,
+                grav: { min: e.target.value[0], max: e.target.value[1] },
+              })
+            }
           />
         </div>
         <p className="text-sm text-center text-gray-400 font-secondary">
@@ -192,8 +213,14 @@ const HomeBody = () => {
             defaultValue={[10, 4500]}
             valueLabelDisplay="auto"
             mark={10}
-            min={minMaxRevo.min}
-            max={minMaxRevo.max}
+            min={minMax.revo.min}
+            max={minMax.revo.max}
+            onChange={(e) =>
+              setFilter({
+                ...filter,
+                revo: { min: e.target.value[0], max: e.target.value[1] },
+              })
+            }
           />
         </div>
         <p className="text-sm text-center text-gray-400 font-secondary">
@@ -204,23 +231,34 @@ const HomeBody = () => {
             defaultValue={[6, 4000]}
             valueLabelDisplay="auto"
             mark={10}
-            min={minMaxDay.min}
-            max={minMaxDay.max}
+            min={minMax.day.min}
+            max={minMax.day.max}
+            onChange={(e) =>
+              setFilter({
+                ...filter,
+                day: { min: e.target.value[0], max: e.target.value[1] },
+              })
+            }
           />
         </div>
 
-        <div className="relative duration-1000  ease-in-out z-30 bg-opacity-10 hover:bg-opacity-30 bg-transparent backdrop-blur-sm scroll-px-8 rounded-3xl mt-[8vh]">
-          <button
-            type="button"
-            className="text-sm text-white font-secondary  px-[2vw] py-[1vh] hover:tracking-widest hover:text-red-600"
-          >
-            <Link
-              to="/homebody"
-              className="duration-1000 ease-in-out -translate-x-1/2 l-0"
+        <div className="relative duration-1000 flex ease-in-out z-30 bg-opacity-10 hover:bg-opacity-30 bg-transparent backdrop-blur-sm scroll-px-8 rounded-3xl mt-[8vh]">
+          {planetsFiltered.map((planet) => (
+            <button
+              key={planet.recordid}
+              type="button"
+              className="text-sm text-white font-secondary  px-[2vw] py-[1vh] hover:tracking-widest hover:text-red-600"
             >
-              DISCOVER
-            </Link>
-          </button>
+              <Link
+                to={`/homebody/${utils.splitPlanet(
+                  planet.fields.planete_planet.toLowerCase()
+                )}`}
+                className="duration-1000 ease-in-out -translate-x-1/2 l-0"
+              >
+                {utils.splitPlanet(planet.fields.planete_planet)}
+              </Link>
+            </button>
+          ))}
         </div>
       </div>
 
