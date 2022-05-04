@@ -26,6 +26,7 @@ const planetNav = [
     img: mercure,
     blur: mercureb,
     imgb: saturna,
+    color: "#F7D389",
   },
   {
     id: 2,
@@ -36,6 +37,7 @@ const planetNav = [
     img: venus,
     blur: venusb,
     imgb: saturna,
+    color: "#DCDCDC",
   },
   {
     id: 3,
@@ -46,6 +48,7 @@ const planetNav = [
     img: earth,
     blur: earthb,
     imgb: saturna,
+    color: "#0E2E9A",
   },
   {
     id: 4,
@@ -56,6 +59,7 @@ const planetNav = [
     img: mars,
     blur: marsb,
     imgb: saturna,
+    color: "#E67614",
   },
   {
     id: 5,
@@ -66,6 +70,7 @@ const planetNav = [
     img: jupiter,
     blur: jupiterb,
     imgb: saturna,
+    color: "#BCD2F5",
   },
   {
     id: 6,
@@ -76,6 +81,7 @@ const planetNav = [
     img: saturn,
     blur: saturnb,
     imgb: saturna,
+    color: "#F0E8E0",
   },
   {
     id: 7,
@@ -86,6 +92,7 @@ const planetNav = [
     img: uranus,
     blur: uranusb,
     imgb: saturna,
+    color: "#0D6DA5",
   },
 
   {
@@ -97,6 +104,7 @@ const planetNav = [
     img: neptune,
     blur: neptuneb,
     imgb: saturna,
+    color: "#59E5EF",
   },
 ];
 
