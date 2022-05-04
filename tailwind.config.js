@@ -27,6 +27,9 @@ module.exports = {
       spinslow: "spin 30s linear infinite",
       wave: "2s ",
       spinveryslow: "spin 230s linear infinite",
+      bounce: " bounce 1s infinite",
+      pulse: "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      none: "pulse 0s cubic-bezier(0.0, 0, 0.0, 0)",
     },
 
     letterSpacing: {
