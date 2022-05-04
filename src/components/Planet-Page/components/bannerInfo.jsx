@@ -3,12 +3,15 @@ import PropTypes from "prop-types";
 import "../../../App.css";
 import { Link } from "react-router-dom";
 
-const Banner = ({ name, subtitle, desc, id }) => {
+const Banner = ({ name, subtitle, desc, id, color }) => {
   return (
     <div className="absolute top-0 flex items-center justify-center w-full h-full ">
       <Link to={`/homeframe/${id}`}>
         {" "}
-        <div className="bg-transparent border-l-4 border-stone-100 shadow-md z-10 h-screen mb-[60vw] rounded-bl-full px-[0.5vw] text-transparent hover:text-stone-300 hover:px-[1.5vw] pt-[30vw]  hover:backdrop-blur-3xl backdrop-blur-lg duration-300 ease-linear animate-pulse hover:animate-none">
+        <div
+          style={{ borderColor: color }}
+          className="bg-transparent border-l-4 shadow-md z-10 h-screen mb-[60vw] rounded-bl-full px-[0.5vw] text-transparent hover:text-stone-300 hover:px-[1.5vw] pt-[30vw]  hover:backdrop-blur-3xl backdrop-blur-lg duration-300 ease-linear animate-pulse hover:animate-none"
+        >
           <span className="z-50 opacity-100 text-xsms font-secondary">
             {/* horrible */} H
             <br />O
@@ -37,6 +40,7 @@ Banner.propTypes = {
   subtitle: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
 };
 
 export default Banner;
