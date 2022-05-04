@@ -10,10 +10,14 @@
     "fix": "prettier --write . && eslint --fix --ext .jsx ."
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.4",
     "animate-text": "^0.3.2",
     "axios": "^0.26.1",
     "crt-terminal": "^1.0.10",
     "mk": "^0.0.1",
+    "multi-range-slider-react": "^1.0.7",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
