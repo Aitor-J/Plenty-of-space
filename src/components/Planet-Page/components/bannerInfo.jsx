@@ -36,6 +36,7 @@ Banner.propTypes = {
   name: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Banner;

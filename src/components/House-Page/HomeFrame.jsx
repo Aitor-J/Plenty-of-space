@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import HomeDescription from "./HomeDescription";
 import house from "../../house";
@@ -10,7 +9,7 @@ function HomeFrame() {
   const [houseDescription, setHouseDescription] = useState([]);
   const getHousePics = () => {
     setHouseDescription(
-      house.find((house) => house.planetId === parseInt(planetId))
+      house.find((theHouse) => theHouse.planetId === parseInt(planetId, 10))
     );
   };
 
