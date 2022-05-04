@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import NavContact from "./NavContact";
-
 import video from "../assets/videos/TheSunInTheSpace.mp4";
 
 const Contact = () => {
@@ -13,7 +11,7 @@ const Contact = () => {
         className="duration-1000 ease-in-out -translate-x-1/2 l-0"
       >
         {" "}
-        <div className="absolute text-lg text-white pb-96 center content-center text-center mt-0 ml-[2vw] z-50 opacity-60">
+        <div className="absolute text-lg text-white pb-96 center content-center text-center -mb-vh30 ml-[3vw] z-50 opacity-60 duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white">
           {"<"}
         </div>{" "}
       </Link>

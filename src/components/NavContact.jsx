@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const NavContact = () => {
   return (
     <div>
-      <div className=" z-30 absolute w-1/4 text-white top-[5vh] right-[10vw] ">
-        <ul className="flex justify-between space-x-40">
+      <div className=" z-30 absolute w-1/4 text-white top-[5vh] right-[10vw]  ">
+        <ul className="flex justify-between space-x-40 ">
           <li className="font-secondary"></li>
           <li className=" font-secondary">
             <Link
