@@ -1,34 +1,31 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import HomeDescription from "./HomeDescription";
+import house from "../../house";
+import NavPlanet from "../Planet-Page/components/NavPlanet";
 
-const HomeFrame = ({ name, desc, img }) => {
-  console.log(name);
+function HomeFrame() {
+  const { planetId } = useParams();
+  const [houseDescription, setHouseDescription] = useState([]);
+  const getHousePics = () => {
+    setHouseDescription(
+      house.find((theHouse) => theHouse.planetId === parseInt(planetId, 10))
+    );
+  };
+
+  useEffect(() => {
+    getHousePics();
+  }, [planetId]);
+
   return (
-    <div className={`${img} bg-no-repeat bg-cover bg-center`}>
-      <div className="h-full bg-gray-50/50 w-80 mx-72 contrast-200">
-        <div className="p-6 space-y-6">
-          <h1 className="text-5xl font-bold text-center text-white shadow-current ">
-            {name}
-          </h1>
-        </div>
+    <div className="relative h-screen overflow-hidden">
+      {houseDescription.img &&
+        houseDescription.name &&
+        houseDescription.desc && <HomeDescription {...houseDescription} />}
 
-        <div className="p-6 space-y-6">
-          <p className="my-10 text-base font-medium leading-relaxed text-white drop-shadow-md ">
-            Characteristic
-          </p>
-          <p className="text-base leading-relaxed text-white drop-shadow-2xl ">
-            {desc}
-          </p>
-        </div>
-      </div>
+      <NavPlanet />
     </div>
   );
-};
-
-HomeFrame.propTypes = {
-  name: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
-};
+}
 
 export default HomeFrame;

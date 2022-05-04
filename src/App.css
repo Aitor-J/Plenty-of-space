@@ -12,12 +12,10 @@
   src: url("./assets/fonts/Nunito-VariableFont_wght.ttf");
 }
 
-
 @font-face {
   font-family: "sanspro";
   src: url("./assets/fonts/SourceSansPro-Light.ttf");
 }
-
 
 @font-face {
   font-family: "Audiowide";
@@ -34,9 +32,6 @@
   src: url("./assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 
-
-      .text-shadow-lg {
-        text-shadow: 2px 1px 2px black;
-      }
-
-      
+.text-shadow-lg {
+  text-shadow: 2px 1px 2px black;
+}

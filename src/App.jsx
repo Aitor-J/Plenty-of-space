@@ -5,6 +5,7 @@ import HomePage from "./components/HomePage";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import PlanetFrame from "./components/Planet-Page/PlanetFrame";
+import HomeFrame from "./components/House-Page/HomeFrame";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/homebody" element={<HomeBody />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/homeframe/:planetId" element={<HomeFrame />} />
         <Route path="/homebody/:planetName" element={<PlanetFrame />} />
       </Routes>
     </div>
