@@ -243,22 +243,26 @@ const HomeBody = () => {
         </div>
 
         <div className="relative duration-1000 flex ease-in-out z-30 bg-opacity-10 hover:bg-opacity-30 bg-transparent backdrop-blur-sm scroll-px-8 rounded-3xl mt-[8vh]">
-          {planetsFiltered.map((planet) => (
-            <button
-              key={planet.recordid}
-              type="button"
-              className="text-sm text-white font-secondary  px-[2vw] py-[1vh] hover:tracking-widest hover:text-red-600"
-            >
-              <Link
-                to={`/homebody/${utils.splitPlanet(
-                  planet.fields.planete_planet.toLowerCase()
-                )}`}
-                className="duration-1000 ease-in-out -translate-x-1/2 l-0"
+          {planetsFiltered.length ? (
+            planetsFiltered.map((planet) => (
+              <button
+                key={planet.recordid}
+                type="button"
+                className="text-sm text-white font-secondary  px-[2vw] py-[1vh] hover:tracking-widest hover:text-red-600"
               >
-                {utils.splitPlanet(planet.fields.planete_planet)}
-              </Link>
-            </button>
-          ))}
+                <Link
+                  to={`/homebody/${utils.splitPlanet(
+                    planet.fields.planete_planet.toLowerCase()
+                  )}`}
+                  className="duration-1000 ease-in-out -translate-x-1/2 l-0"
+                >
+                  {utils.splitPlanet(planet.fields.planete_planet)}
+                </Link>
+              </button>
+            ))
+          ) : (
+            <p className="text-white">No result</p>
+          )}
         </div>
       </div>
 
