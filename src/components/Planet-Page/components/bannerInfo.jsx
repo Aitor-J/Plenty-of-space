@@ -8,17 +8,13 @@ const Banner = ({ name, subtitle, desc }) => {
     <div className="absolute top-0 flex items-center justify-center w-full h-full ">
       <Link to="/marshouses">
         {" "}
-        <div className="bg-gray-400/10  z-10 h-screen px-[1vw] hover:px-[2vw] pt-[1vh]  hover:backdrop-blur-md backdrop-blur-sm hover:bg-white/60 duration-1000 ease-linear">
-          {" "}
-          <span className="z-50 text-red-600 opacity-100 text-xsms font-secondary">
-            {" "}
-            H <br />
+        <div className="bg-transparent border-l-4 border-stone-100 shadow-md z-10 h-screen mb-[60vw] rounded-bl-full px-[0.5vw] text-transparent hover:text-stone-300 hover:px-[1.5vw] pt-[30vw]  hover:backdrop-blur-3xl backdrop-blur-lg duration-300 ease-linear animate-pulse hover:animate-none">
+          <span className="z-50 opacity-100 text-xsms font-secondary">
+            {/* horrible */} H
             <br />O
-            <br />
-            <br /> U <br />
+            <br /> U
             <br />S
-            <br />
-            <br />E <br />
+            <br />E
             <br />S <br />
           </span>
         </div>{" "}

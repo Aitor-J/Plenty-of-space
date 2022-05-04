@@ -10,13 +10,13 @@ const footerInfo = ({
 }) => {
   return (
     <div className="absolute w-2/3 text-white bottom-[5vh] left-1/3 ">
-      <ul className="flex justify-between space-x-40 ">
+      <ul className="flex justify-between space-x-40 translate-y-10 ">
         <li className="w-15 font-secondary text-shadow-lg ">
           EXOSPHERE
           <p className="py-2 text-xs text-white font-nunito text-shadow-lg ">
             <span className="font-bold tracking-wider text-gray-400 underline ">
               {" "}
-              Atmospheric composition:
+              Atmospheric:
             </span>{" "}
             {atmosphericComposition} <br />
             <span className="font-bold tracking-wider text-gray-400 underline">
@@ -31,11 +31,11 @@ const footerInfo = ({
           <p className="py-2 text-xs text-white font-nunito text-shadow-lg ">
             <span className="font-bold tracking-wider text-gray-400 underline">
               {" "}
-              Max temperature:{" "}
+              Max:{" "}
             </span>
             {temperatureMaxHighestTemperatureDegc} <br />
             <span className="font-bold tracking-wider text-gray-400 underline">
-              Min temperature:
+              Min:
             </span>{" "}
             {temperatureMinLowestTemperatureDegc}
           </p>
@@ -50,7 +50,7 @@ const footerInfo = ({
             {diametreDiameterKm} km <br />
             <span className="font-bold tracking-wider text-gray-400 underline">
               {" "}
-              Planet type:
+              Type:
             </span>{" "}
             {typeDAstreTypeOfPlanet}
           </p>
