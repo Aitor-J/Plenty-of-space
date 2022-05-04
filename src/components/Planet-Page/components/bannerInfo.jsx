@@ -22,8 +22,16 @@ const Banner = ({ name, subtitle, desc, id, color }) => {
           </span>
         </div>{" "}
       </Link>
-      <div className="w-min h-screen p-[2vw] text-white mr-[20vw] shadow-lg text-align-start backdrop-blur-sm bg-white/10 border border-gray-800 drop-shadow-xl">
-        <h1 className="pt-[5vh] text-base text-center font-title">{name}</h1>
+      <div
+        style={{ borderColor: color }}
+        className="w-min h-screen p-[2vw] text-white mr-[20vw] shadow-lg text-align-start backdrop-blur-sm bg-white/10 border drop-shadow-xl"
+      >
+        <h1
+          style={{ color }}
+          className="pt-[5vh] text-base text-center font-title"
+        >
+          {name}
+        </h1>
         <p className="flex pt-[5vh] text-xms text-gray-300 font-secondary">
           {subtitle}
         </p>

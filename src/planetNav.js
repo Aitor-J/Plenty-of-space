@@ -37,7 +37,7 @@ const planetNav = [
     img: venus,
     blur: venusb,
     imgb: saturna,
-    color: "#DCDCDC",
+    color: "#9F9D9D",
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const planetNav = [
     img: earth,
     blur: earthb,
     imgb: saturna,
-    color: "#0E2E9A",
+    color: "#2e4d81",
   },
   {
     id: 4,
@@ -81,7 +81,7 @@ const planetNav = [
     img: saturn,
     blur: saturnb,
     imgb: saturna,
-    color: "#F0E8E0",
+    color: "#8b9daf",
   },
   {
     id: 7,
