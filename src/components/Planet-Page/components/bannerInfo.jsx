@@ -24,7 +24,7 @@ const Banner = ({ name, subtitle, desc, id, color }) => {
       </Link>
       <div
         style={{ borderColor: color }}
-        className="w-min h-screen p-[2vw] text-white mr-[20vw] shadow-lg text-align-start backdrop-blur-sm bg-white/10 border drop-shadow-xl"
+        className="w-min h-screen p-[2vw] text-white mr-[20vw] shadow-lg text-align-start backdrop-blur-sm bg-white/10 border-l border-r drop-shadow-xl"
       >
         <h1
           style={{ color }}

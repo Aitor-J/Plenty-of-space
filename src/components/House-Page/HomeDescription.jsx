@@ -6,7 +6,7 @@ const HomeDescription = ({ name, desc, img }) => {
     <div>
       <img src={img} className="absolute w-full h-full bg-cover" alt="" />
       <div className="pl-80 ">
-        <div className="h-screen border bg-white/10 w-min backdrop-blur-sm font-secondary">
+        <div className="h-screen border-l border-r bg-white/10 w-min backdrop-blur-sm font-secondary">
           <div className="p-12 pt-5">
             <h1 className="font-semibold text-center text-stone-200 font-title text-tiny shadow-current ">
               {name}
