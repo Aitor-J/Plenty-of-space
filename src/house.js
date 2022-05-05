@@ -39,7 +39,7 @@ const house = [
     planetId: 4,
     name: "Printed hut",
     type: "Duplex",
-    desc: "This is the perfect flat for you, come to visit it you'll love it ",
+    desc: "Mars is the fourth planet in the Solar System in ascending order of distance from the Sun and the second in ascending order of size and mass. Its distance from the Sun is between 1.381 and 1.666 AU, with an orbital period of 669.58 Martian days.",
     img: "https://www.telegraph.co.uk/content/dam/property/2016/11/07/mars-main_trans_NvBQzQNjv4BqNJjoeBT78QIaYdkJdEY4CnGTJFJS74MYhNY6w3GNbO8.jpg",
   },
 
