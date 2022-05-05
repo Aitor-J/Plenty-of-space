@@ -1,36 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import images from "../assets/images/black_hole.jpg";
 import NavAbout from "./Planet-Page/components/NavAbout";
-
-import video from "../assets/videos/Particles_323.mp4";
 
 const about = () => {
   return (
     <div>
-      <Link
-        to="/homebody"
-        className="duration-1000 ease-in-out -translate-x-1/2  hover:text-white "
-      >
-        <div className="absolute text-lg text-white pb-[80vh] center content-center text-center  ml-[3vw] z-50 opacity-60 duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white ">
-          {"<"}
-        </div>
-      </Link>
-
-      <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+      <div style={{ backgroundImage: `url(${images})` }}>
+        <Link
+          to="/homebody"
+          className="duration-1000 ease-in-out -translate-x-1/2  hover:text-white "
         >
-          <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          <div className="absolute text-lg text-white pb-[80vh] center content-center text-center  ml-[3vw] z-50 opacity-60 duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white ">
+            {"<"}
+          </div>
+        </Link>
 
         <div className="relative z-30 content-center font-secondary ">
           <div className="pl-48  ">
-            <div className=" opacity-70 w-1/2 h-screen text-lg font-bold text-white rounded-3xl ml-vh30 bg-slate-600 ">
+            <div className=" opacity-70 w-1/2 h-screen text-lg font-bold text-white rounded-3xl ml-vh30 bg-black ">
               <div className="pt-10 pl-20">
                 <h2> ABOUT US</h2>
               </div>
@@ -67,8 +55,8 @@ const about = () => {
             </div>
           </div>
         </div>
-        <NavAbout />
-      </header>
+      </div>
+      <NavAbout />
     </div>
   );
 };
