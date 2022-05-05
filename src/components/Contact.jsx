@@ -1,78 +1,90 @@
 import React from "react";
-import Banner from "./Planet-Page/components/bannerInfo";
+import { Link } from "react-router-dom";
+import NavContact from "./NavContact";
+import video from "../assets/videos/TheSunInTheSpace.mp4";
 
 const Contact = () => {
   return (
-    <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+    <div>
+      <Link
+        to="/homebody"
+        className="duration-1000 ease-in-out -translate-x-1/2 l-0"
       >
-        <source
-          src="./src/assets/video/TheSunInTheSpace.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
+        {" "}
+        <div className="absolute text-lg text-white pb-96 center content-center text-center -mb-vh30 ml-[3vw] z-50 opacity-60 duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white">
+          {"<"}
+        </div>{" "}
+      </Link>
 
-      <div className="font-secondary grid grid-cols-12 relative z-30 opacity-60 ">
-        <div className="col-span-4 text-white font-sans font-bold bg-black min-h-screen pl-7">
-          <div className=" relative grid grid-rows-6 grid-flow-col min-h-screen items-center justify-items-start">
-            <div className="row-span-4 row-start-2 text-xs">
-              <div className=" pt-10 pr-20 ">
-                <label htmlFor="name_input" className="text-sm font-sans">
-                  Name
-                  <input
-                    type="text"
-                    name="username"
-                    placeholder="Write your Name"
-                    className="w-full opacity-60  text-center py-3 px-12 border hover: border-gray-500 rounded shadow text-xs font-sans"
-                  />
-                </label>
-              </div>
-              <div className="pt-2 pr-20">
-                <label
-                  htmlFor="email_input"
-                  className="text-sm font-sans font-medium"
-                >
-                  Email
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="Write your email"
-                    className=" w-full opacity-60  text-center py-3 px-12 border hover: border-gray-500 rounded shadow text-xs font-sans"
-                  />
-                </label>
-              </div>
-              <div className="pt-2 pr-20 ">
-                <label
-                  htmlFor="message_input"
-                  className="text-sm font-sans font-medium"
-                >
-                  Message
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="Write your message"
-                    className=" w-full opacity-60 text-center py-20 px-12 border hover: border-gray-500 rounded shadow text-xs font-sans"
-                  />
-                </label>
-              </div>
-              <div className="text-sm font-sans font-medium w-full pr-20 pt-8">
-                <button
-                  type="button"
-                  className="text-center w-full py-4 bg-sky-800 hover:bg-indigo-900 rounded-md text-white"
-                >
-                  SEND
-                </button>
+      <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute w-auto min-w-full min-h-full max-w-none"
+        >
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className="relative z-30 grid grid-cols-12 font-secondary opacity-60 ">
+          <div className="min-h-screen col-span-4 pl-20 font-sans font-bold text-white bg-black">
+            <div className="relative grid items-center min-h-screen grid-flow-col grid-rows-6 justify-items-start">
+              <div className="row-span-4 row-start-2 text-xs">
+                <div className="pt-10 pr-20 ">
+                  <label htmlFor="name_input" className="font-sans text-sm ">
+                    Name
+                    <input
+                      type="text"
+                      name="username"
+                      placeholder="Write your Name"
+                      className="w-full px-12 py-3 font-sans text-xs text-center text-black border border-gray-500 rounded shadow opacity-60"
+                    />
+                  </label>
+                </div>
+                <div className="pt-2 pr-20 text-">
+                  <label
+                    htmlFor="email_input"
+                    className="font-sans text-sm font-medium text-white "
+                  >
+                    Email
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Write your email"
+                      className="w-full px-12 py-3 font-sans text-xs text-center text-black border border-gray-500 rounded shadow opacity-60 hover"
+                    />
+                  </label>
+                </div>
+                <div className="pt-2 pr-20 ">
+                  <label
+                    htmlFor="message_input"
+                    className="font-sans text-sm font-medium text-white"
+                  >
+                    Message
+                    <input
+                      type="text"
+                      name="text"
+                      placeholder="Write your message"
+                      className="w-full px-12 py-20 font-sans text-xs text-center text-black border border-gray-500 rounded shadow opacity-60"
+                    />
+                  </label>
+                </div>
+                <div className="w-full pt-8 pr-20 font-sans text-sm font-medium">
+                  <button
+                    type="button"
+                    className="w-full py-4 text-center text-white bg-gray-900 rounded-md hover:bg-sky-900"
+                  >
+                    SEND
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+        <NavContact />
+      </header>
+    </div>
   );
 };
 

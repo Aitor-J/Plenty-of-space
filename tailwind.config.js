@@ -3,11 +3,14 @@ module.exports = {
   theme: {
     fontFamily: {
       title: ["space age"],
+      nunito: ["nunito"],
       secondary: ["Audiowide"],
       terminal: ["VT323"],
       mono: ["ui-monospace", "SFMono-Regular"],
       display: ["Oswald"],
-      body: ['"Open Sans"'],
+      body: ["OpenSans"],
+      test: ["OpenSans"],
+      essai: ["sanspro"],
     },
     fontSize: {
       xs: "1vw",
@@ -24,6 +27,9 @@ module.exports = {
       spinslow: "spin 30s linear infinite",
       wave: "2s ",
       spinveryslow: "spin 230s linear infinite",
+      bounce: " bounce 1s infinite",
+      pulse: "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      none: "pulse 0s cubic-bezier(0.0, 0, 0.0, 0)",
     },
 
     letterSpacing: {
@@ -32,7 +38,7 @@ module.exports = {
       tight: "-.025em",
       normal: "0",
       wide: ".025em",
-      wider: ".05em",
+      wider: ".1em",
       widest: "0.3em",
     },
     plugins: {
@@ -42,7 +48,7 @@ module.exports = {
       sm: "576px",
       // => @media (min-width: 576px) { ... }
 
-      md: "960px",
+      md: "900px",
       // => @media (min-width: 960px) { ... }
 
       lg: "1440px",
