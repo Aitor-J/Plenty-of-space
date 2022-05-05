@@ -31,7 +31,6 @@ function PlanetFrame() {
               .trim() === planetName
           );
         });
-        console.log(planetData);
         setPlanetInfo(utils.renameKey(planetData.fields));
       });
     getPlanetPics();

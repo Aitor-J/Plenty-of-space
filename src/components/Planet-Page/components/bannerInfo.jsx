@@ -47,7 +47,7 @@ Banner.propTypes = {
   name: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   color: PropTypes.string.isRequired,
 };
 
