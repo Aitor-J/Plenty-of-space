@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const HomeDescription = ({ name, desc, img }) => {
   return (
     <div>
-      <img src={img} className="absolute w-full h-full bg-cover" alt="" />
+      <img src={img} className="absolute w-full h-full bg-cover" alt="house" />
       <div className="pl-80 ">
         <div className="h-screen border-l border-r bg-white/10 w-min backdrop-blur-sm font-secondary">
           <div className="p-12 pt-5">

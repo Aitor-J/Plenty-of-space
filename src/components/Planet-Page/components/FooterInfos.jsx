@@ -1,6 +1,4 @@
-import "../../../App.css";
-
-const footerInfo = ({
+const footerInfos = ({
   graviteGravityMS2,
   diametreDiameterKm,
   atmosphericComposition,
@@ -60,4 +58,4 @@ const footerInfo = ({
   );
 };
 
-export default footerInfo;
+export default footerInfos;

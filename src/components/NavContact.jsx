@@ -9,8 +9,7 @@ const NavContact = () => {
           <li className="font-secondary" />
           <li className=" font-secondary">
             <Link
-              className="absolute duration-700 ease-in-out -translate-x-1/2 l-0
-              hover:tracking-widest hover:text-white"
+              className="absolute duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white"
               to="/homebody"
             >
               _HOME
@@ -18,11 +17,9 @@ const NavContact = () => {
           </li>
           <li className=" font-secondary">
             <Link
-              className="absolute duration-700 ease-in-out -translate-x-1/2 l-0
-              hover:tracking-widest hover:text-white"
+              className="absolute duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white"
               to="/about"
             >
-              {" "}
               _ABOUT
             </Link>
           </li>
