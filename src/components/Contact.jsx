@@ -70,7 +70,7 @@ const Contact = () => {
               SEND
             </button>
 
-            <div class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full"></div>
+            <div className="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" />
           </div>
         </form>
       </div>
