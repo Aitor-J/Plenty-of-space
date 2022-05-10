@@ -4,7 +4,7 @@ const house = [
     name: "Gigantic Duplex",
     type: "Duplex",
     desc: "Uranus is the seventh planet in the Solar System in order of distance from the Sun. It orbits around it at a distance of about 19.2 astronomical units (2.87 billion kilometers), with a period of revolution of 84.05 Earth years.",
-    img: "http://cdn30.us1.fansshare.com/image/wallpaperhd1080p/amazing-fantasy-sci-fi-city-wallpaper-hd-city-712322459.jpg",
+    img: "https://c.wallhere.com/photos/bf/14/digital_art_Matte_painting_concept_art_urban_cityscape_city_futuristic_matte_paint-218457.jpg!d",
   },
   {
     planetId: 1,
