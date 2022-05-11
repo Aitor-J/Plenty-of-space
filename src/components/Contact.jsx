@@ -5,16 +5,19 @@ import images from "../assets/images/123.png";
 
 const Contact = () => {
   return (
-    <div className="bg-cover h-screen w-full">
-      <div style={{ backgroundImage: `url(${images})` }} className="h-screen">
+    <div className="w-full h-screen ">
+      <div
+        style={{ backgroundImage: `url(${images})` }}
+        className="h-screen bg-no-repeat bg-cover"
+      >
         <Link to="/homebody" className="duration-1000">
           <div className="absolute text-lg text-white center content-center text-center -mb-vh30 ml-[2vw] z-50 opacity-60 duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white">
             {"<"}
           </div>
         </Link>
 
-        <form className="w-1/3 backdrop-blur-2xl h-full flex flex-col items-center justify-center font-secondary">
-          <div className=" pt-2 w-4/5 ">
+        <form className="flex flex-col items-center justify-center w-1/3 h-full backdrop-blur-2xl font-secondary">
+          <div className="w-4/5 pt-2 ">
             <label
               htmlFor="name_input"
               className="font-sans text-sm text-white "
@@ -25,7 +28,7 @@ const Contact = () => {
                 name="username"
                 required
                 placeholder="Write your Name"
-                className="w-full px-12 py-3 font-sans text-xs text-center text-black border  border-gray-500 rounded shadow opacity-60  "
+                className="w-full px-12 py-3 font-sans text-xs text-center text-black border border-gray-500 rounded shadow opacity-60 "
               />
             </label>
           </div>
@@ -44,7 +47,7 @@ const Contact = () => {
               />
             </label>
           </div>
-          <div className="pt-2 w-4/5 ">
+          <div className="w-4/5 pt-2 ">
             <label
               htmlFor="message_input"
               className="font-sans text-sm font-medium text-white "
@@ -57,20 +60,20 @@ const Contact = () => {
                 name="text"
                 required
                 placeholder="Write your message"
-                className="w-full resize-none font-sans text-xs  text-center pt-16 text-black border border-gray-500 rounded shadow opacity-60 "
+                className="w-full pt-16 font-sans text-xs text-center text-black border border-gray-500 rounded shadow resize-none opacity-60 "
               />
             </label>
           </div>
 
-          <div className="w-2/3 pt-12 font-sans text-sm font-medium pb-0">
+          <div className="w-2/3 pt-12 pb-0 font-sans text-sm font-medium">
             <button
               type="submit"
-              className="w-full py-4 text-center text-white bg-gray-900 rounded-md hover:bg-sky-900 transition"
+              className="w-full py-4 text-center text-white transition bg-gray-900 rounded-md hover:bg-sky-900"
             >
               SEND
             </button>
 
-            <div className="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" />
+            <div className="fixed inset-0 hidden w-full h-full overflow-y-auto bg-gray-600 bg-opacity-50" />
           </div>
         </form>
       </div>
