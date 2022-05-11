@@ -54,7 +54,7 @@ const footerInfo = ({
             <div className="py-2 text-xs text-white font-nunito text-shadow-lg ">
               <div>
                 <span className="font-bold tracking-wider text-gray-400 underline">
-                  Moy:
+                  Avg:
                 </span>
                 {temperatureMoyenneMeanTemperatureDegc}°C
               </div>
@@ -85,12 +85,12 @@ const footerInfo = ({
 };
 
 footerInfo.propTypes = {
-  graviteGravityMS2: PropTypes.string.isRequired,
-  diametreDiameterKm: PropTypes.string.isRequired,
-  atmosphericComposition: PropTypes.string.isRequired,
-  temperatureMaxHighestTemperatureDegc: PropTypes.string.isRequired,
-  temperatureMinLowestTemperatureDegc: PropTypes.string.isRequired,
-  typeDAstreTypeOfPlanet: PropTypes.string.isRequired,
+  graviteGravityMS2: PropTypes.number,
+  diametreDiameterKm: PropTypes.number,
+  atmosphericComposition: PropTypes.string,
+  temperatureMaxHighestTemperatureDegc: PropTypes.number,
+  temperatureMinLowestTemperatureDegc: PropTypes.number,
+  typeDAstreTypeOfPlanet: PropTypes.string,
 };
 
 export default footerInfo;
