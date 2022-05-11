@@ -1,8 +1,12 @@
+
+
+
 import "../../../App.css";
 import PropTypes from "prop-types";
 import utils from "../../../lib/utils";
 
 const footerInfo = ({
+
   graviteGravityMS2,
   diametreDiameterKm,
   atmosphericComposition,
@@ -84,6 +88,9 @@ const footerInfo = ({
   );
 };
 
+
+
+
 footerInfo.propTypes = {
   graviteGravityMS2: PropTypes.string.isRequired,
   diametreDiameterKm: PropTypes.string.isRequired,
@@ -94,3 +101,4 @@ footerInfo.propTypes = {
 };
 
 export default footerInfo;
+

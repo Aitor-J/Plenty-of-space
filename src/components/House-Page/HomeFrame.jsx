@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import HomeDescription from "./HomeDescription";
-import house from "../../house";
+import house from "../../houses";
 import NavPlanet from "../Planet-Page/components/NavPlanet";
 
 function HomeFrame() {

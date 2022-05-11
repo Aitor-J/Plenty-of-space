@@ -48,7 +48,6 @@ const HomePage = () => {
             }
           </Keyboard>
           <Cursor />
-          <br />
         </div>
         <div className="absolute duration-1000 ease-in-out z-30 bg-opacity-10 hover:bg-opacity-30 bg-transparent backdrop-blur-sm scroll-px-8 rounded-3xl mt-[72vh]">
           <button
@@ -59,8 +58,7 @@ const HomePage = () => {
               to="/homebody"
               className="duration-1000 ease-in-out -translate-x-1/2 l-0"
             >
-              {" "}
-              FIND A NEW HOME{" "}
+              FIND A NEW HOME
             </Link>
           </button>
         </div>
