@@ -8,10 +8,9 @@ const Contact = () => {
     <div className="bg-cover h-screen w-full">
       <div style={{ backgroundImage: `url(${images})` }} className="h-screen">
         <Link to="/homebody" className="duration-1000">
-          {" "}
           <div className="absolute text-lg text-white center content-center text-center -mb-vh30 ml-[2vw] z-50 opacity-60 duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white">
             {"<"}
-          </div>{" "}
+          </div>
         </Link>
 
         <form className="w-1/3 backdrop-blur-2xl h-full flex flex-col items-center justify-center font-secondary">
@@ -62,6 +61,7 @@ const Contact = () => {
               />
             </label>
           </div>
+
           <div className="w-2/3 pt-12 font-sans text-sm font-medium pb-0">
             <button
               type="submit"
