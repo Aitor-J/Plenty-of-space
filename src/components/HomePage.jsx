@@ -19,7 +19,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="relative z-30 items-center text-sm text-gray-100 backdrop-blur-md bg-white/10 font-terminal p-4 rounded-2xl w-2/5 border-2 border-solidoutline-white text-center px-[2vw] py-[1vh] mt-[3vw]">
+        <div className="relative z-30 items-center text-sm text-gray-100 backdrop-blur-md bg-white/10 font-terminal p-4 rounded-2xl w-[60] border-2 border-solidoutline-white text-center px-[2vw] py-[1vh] mt-[3vw]">
           <button className="pr-5 text-white focus:ring-4" type="button">
             <svg
               className="w-6 h-6"
@@ -43,7 +43,7 @@ const HomePage = () => {
                 1000,
                 "Incoming transmission ...",
                 300,
-                "First real estate to colonise space"
+                "First real estate agency to colonise space"
               )
             }
           </Keyboard>
