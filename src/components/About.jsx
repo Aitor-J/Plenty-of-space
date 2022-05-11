@@ -6,25 +6,28 @@ import NavAbout from "./Planet-Page/components/NavAbout";
 const about = () => {
   return (
     <div>
-      <div style={{ backgroundImage: `url(${images})` }}>
+      <div
+        className="bg-no-repeat bg-cover"
+        style={{ backgroundImage: `url(${images})` }}
+      >
         <Link
           to="/homebody"
-          className="duration-1000 ease-in-out -translate-x-1/2  hover:text-white "
+          className="duration-1000 ease-in-out -translate-x-1/2 hover:text-white "
         >
           <div className="absolute text-lg text-white pb-[80vh] center content-center text-center  ml-[3vw] z-50 opacity-60 duration-700 ease-in-out -translate-x-1/2 l-0 hover:tracking-widest hover:text-white ">
             {"<"}
           </div>
         </Link>
 
-        <div className="relative z-30 content-center font-secondary  ">
-          <div className="pl-48  ">
-            <div className=" opacity-70 w-1/2 h-screen text-lg font-bold text-white rounded-3xl ml-vh30 bg-black  ">
+        <div className="relative z-30 content-center font-secondary ">
+          <div className="pl-48 ">
+            <div className="w-1/2 h-screen text-lg font-bold text-white bg-black  opacity-70 rounded-3xl ml-vh30">
               <div className="pt-10 pl-20">
                 <h2> ABOUT US</h2>
               </div>
 
               <div>
-                <div className="pt-9 text-xs ml-vh2 pr-9 pl-9 leading-8 tracking-wider text-center ">
+                <div className="text-xs leading-8 tracking-wider text-center pt-9 ml-vh2 pr-9 pl-9 ">
                   <p>
                     The plenty of space is a space real estate agency
                     abbreviated as POS, is a space agency placed in low Earth
